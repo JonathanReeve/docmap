@@ -14,13 +14,14 @@ head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
     <div id="pagination-top" class="pagination"><?php echo pagination_links(); ?></div>
 
     <?php while (loop_items()): ?>
-    <div class="item hentry">
+    <div class="item hentry"><div class="mosaic-block bar">
+
         <div class="item-meta">
 
-        <h2><?php echo link_to_item(item('Dublin Core', 'Title'), array('class'=>'permalink')); ?></h2>
+        <div class="mosaic-overlay"><h2><?php echo link_to_item(item('Dublin Core', 'Title'), array('class'=>'permalink')); ?></h2></div>
 
         <?php if (item_has_thumbnail()): ?>
-        <div class="item-img">
+        <div class="item-img mosaic-backdrop">
             <?php echo link_to_item(item_square_thumbnail()); ?>
         </div>
         <?php endif; ?>
@@ -44,7 +45,7 @@ head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
         <?php echo plugin_append_to_items_browse_each(); ?>
 
         </div><!-- end class="item-meta" -->
-    </div><!-- end class="item hentry" -->
+    </div><!--end class="mosaic-block bar"--></div><!-- end class="item hentry" -->
     <?php endwhile; ?>
 
     <div id="pagination-bottom" class="pagination"><?php echo pagination_links(); ?></div>
