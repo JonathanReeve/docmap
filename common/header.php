@@ -20,7 +20,19 @@
     ?>
 
     <!-- JavaScripts -->
-    <?php display_js(); ?>
+    <?php 
+    queue_js('mosaic.1.0.1'); 
+    display_js(); 
+    ?>
+		<!-- This javascript snippet controls the mosaic overlay animation -->
+		<script type="text/javascript">  
+			jQuery(function($){
+				$('.bar').mosaic({
+					animation	:	'slide'
+				});
+		    });
+		</script> 
+
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
