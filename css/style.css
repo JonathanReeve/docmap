@@ -1,0 +1,408 @@
+/* == Reset == */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* == Generic == */
+body {}
+
+    /* -- Headings -- */
+    h1 {
+   	font-size: 2.4em;
+        line-height: 1em;
+	margin-bottom: 0.5em;
+	letter-spacing: .05em;
+    }
+    h2 {}
+    h3 {}
+    h4 {}
+    h5 {}
+    h6 {}
+
+    /* -- Misc Block elements -- */
+    p {}
+    ul {}
+    ol {}
+    dl {}
+    li {}
+
+    /* -- Misc Inline elements -- */
+    img {}
+
+    em {font-style:italic;}
+    strong {font-weight:bold;}
+
+    /* -- Links -- */
+    a:link {}
+    a:visited {}
+    a:hover {}
+    a:active {}
+
+    .view-items-link {}
+
+    /* -- Body Classes -- */
+    .browse {}
+    .item {}
+    .show {}
+    .summary {}
+    .tags {display:none;}
+
+    /* -- Misc Classes */
+
+    .image {} /* items/browse  */
+
+    .description {}
+
+    .even {}
+    .odd {}
+
+        /* Navigation Classes*/
+        .navigation {}
+
+        /* Pagination Classes */
+	.pagination ul { /* adapted these from the Berlin theme */
+			margin-left:0;
+			margin-right: 20px;
+			float: right;
+			}
+			.pagination li {
+				display:inline;
+				padding:6px 8px;
+				background:#0176b4;
+				color:#fff;
+				margin-right:1px;
+				}
+			.pagination a {
+				color:#fff;
+				text-decoration:none;
+				}
+
+        .next {}
+        .previous {}
+
+        /* Items Classes*/
+        .browse-items-link {}
+
+        .featured {}
+
+        .element {}
+        .element-text {}
+
+        .item {}
+        .item-description {display:none;}
+        .item-img {}
+        .items-list {}
+        .item-meta
+        .items-nav
+        .item-pagination {}
+        .item-tags {display:none;}
+        .item-thumbnail {}
+        .item-title {}
+
+
+        /* Collections Classes */
+        .collection {}
+        .collection-description {}
+
+        /* Exhibits Classes */
+        .exhibit {}
+        .exhibit-description {}
+        .exhibit-tags {}
+
+        /* Microformats Classes */
+        .hentry {
+ 		display: inline-block; 	
+		vertical-align: top;
+		border: 1px dotted orange;
+		width: 200px;
+	}
+
+        /* Search Classes */
+        .no-results {}
+
+        /* Tags Classes */
+        .tags {}
+
+        /* Tag Clouds */
+        .hTagcloud ul {}
+            .hTagcloud li {}
+
+            .popular a {}
+            .v-popular a {}
+            .vv-popular a {}
+            .vvv-popular a {}
+            .vvvv-popular a {}
+            .vvvvv-popular a {}
+            .vvvvvv-popular a {}
+            .vvvvvvv-popular a {}
+            .vvvvvvvv-popular a {}
+
+
+/* == Wrap == */
+#wrap {
+	width: 950px;
+	margin: 0 auto;
+	background: #FFF;
+}
+
+/* == Header == */
+#header {}
+    #search-wrap {}
+
+/* == Content == */
+
+    /* Structure */
+    #content {}
+        #primary {}
+        #secondary {}
+
+    /* General */
+    #featured-item {}
+    #recent-items {}
+
+    #featured-exhibit {}
+
+    #pagination-top {
+   	position: relative; 
+       right: 20px;	
+    }
+    #pagination-bottom {}
+
+    /* Navigation */
+    #primary-nav {
+    	border: 1px solid red;
+    }
+    #primary-nav li { 
+	display: inline;
+    }	    
+    #secondary-nav {
+		border: 1px solid blue;
+    }
+    				/* tabbed secondary nav adapted from Berlin theme */
+				#secondary-nav li {
+					display: inline;  
+					padding:0.5em 0;
+					}
+				#secondary-nav a {
+					padding:0.5em 1em 0.5em;
+					color:#666;
+					}
+				#secondary-nav li.current a {
+					background:#fff;
+					color:#333;
+					font-weight:bold;
+					border-top:1px solid #ccc;
+					border-left:1px solid #ccc;
+					border-right:1px solid #ccc;
+					border-bottom:1px solid #fff;
+					}
+				.tags #secondary-nav .nav-browse-all a {
+					font-weight:normal;
+					border:none;
+					border-bottom:1px solid #fff;
+					background:none;
+					}
+
+    /* Advanced Search */
+    #advanced-search-form {}
+        #submit_search_advanced {}
+
+    /* Home Page */
+    #featured-collection {}
+
+    /* Items Pages */
+    #extended-metadata {}
+        #item-type {}
+
+    #item-metadata {}
+        #item-publisher {}
+        #item-creator {}
+        #item-description {}
+        #item-relation {}
+        #item-spatial-coverage {}
+        #item-rights {}
+        #item-source {}
+        #item-subject {}
+        #item-additional-creator {}
+        #item-format {}
+        #item-contributor {}
+        #item-rights-holder {}
+        #item-provenance {}
+        #item-date {}
+        #item-temporal-coverage {}
+        #item-date-added {}
+        #item-collection {}
+        #item-files {}
+        #item-tags {}
+        #item-citation {}
+
+    #next-item {}
+    #previous-item {}
+
+        /* Search Results */
+        #advanced_search_header {}
+        #primary #basic_search_header {}
+        #primary #submit_search {}
+
+    /* Exhibits Pages */
+    #exhibit-nav {}
+    #exhibit-summary {}
+    #exhibit-show {}
+
+    /* Collections Pages */
+    #collection-description {}
+    #collectors {}
+
+
+/* == Footer == */
+#footer {}
+
+/* 
+	Mosaic - Sliding Boxes and Captions jQuery Plugin
+	Version 1.0.1
+	www.buildinternet.com/project/mosaic
+	
+	By Sam Dunn / One Mighty Roar (www.onemightyroar.com)
+	Released under MIT License / GPL License
+*/
+
+
+/*General Mosaic Styles*/
+.mosaic-block {
+	float:left;
+	position:relative;
+	overflow:hidden;
+	width:200px;
+	height:200px;
+	margin:10px;
+	background:#111 url(../images/progress.gif) no-repeat center center;
+	border:1px solid #fff;
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+} 
+* {
+	margin:0;
+	padding:0;
+	border:none;
+	outline:none;
+}
+* {
+	margin:0;
+	padding:0;
+	border:none;
+	outline:none;
+}
+}
+
+	.mosaic-backdrop {
+		display:none;
+		position:absolute;
+		top:0;
+		height:100%;
+		width:100%;
+		background:#111;
+	}
+	
+	.mosaic-overlay {
+		display:none;
+		z-index:5;
+		position:absolute;
+		width:100%;
+		height:100%;
+		background:#111;
+	}
+	.mosaic-overlay h2 { 
+		padding: 10px;
+	}
+	.mosaic-overlay h2 a { 
+		color: #FFF;
+		text-decoration: none;
+	}
+	
+		/*** Custom Animation Styles (You can remove/add any styles below) ***/
+		.circle .mosaic-overlay {
+			background:url(../images/hover-magnify.png) no-repeat center center;
+			opacity:0;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
+			filter:alpha(opacity=00);
+			display:none;
+		}
+		
+		.fade .mosaic-overlay {
+			opacity:0;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
+			filter:alpha(opacity=00);
+			background:url(../images/bg-black.png);
+		}
+		
+		.bar2 .mosaic-overlay { 
+			bottom:-100px;
+			height:100px;
+			background:url(../images/bg-black.png);
+		}
+		
+		.bar .mosaic-overlay {
+			bottom:-50px;
+			height:100px;
+			opacity:0.8;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+			filter:alpha(opacity=80);
+		}
+		
+			.bar .mosaic-overlay:hover {
+				opacity:1;
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+				filter:alpha(opacity=100);
+			}
+		
+		.bar3 .mosaic-overlay {
+			top:-100px;
+			height:100px;
+			background:url(../images/bg-black.png);
+		}
+		/*** End Animation Styles ***/
