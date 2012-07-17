@@ -96,8 +96,11 @@ body {
     /* -- Links -- {{{2 */
     a:link { 
     	text-decoration: none; 
+	color: #581957; /* Bright purple */
     }
-    a:visited {}
+    a:visited {
+   	color: #3A053A; /* Darker purple */
+    }
     a:hover {}
     a:active {}
 
@@ -216,6 +219,7 @@ body {
 
 /* == Header == {{{1 */
 #header {
+	background: url('../images/flower.png') no-repeat right;
 	padding-top: 20px;
 	height: 100px;
 }
