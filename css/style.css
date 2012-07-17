@@ -180,6 +180,7 @@ body {
  		display: inline-block; 	
 		vertical-align: top;
 		width: 200px;
+		margin-right: 10px;
 	}
 
         /* Search Classes */
@@ -274,6 +275,9 @@ body {
     }
     #primary-nav li a:hover { 
 	color: #ddd;
+	background-image: url('../images/light.png');
+	background-position: center 50%;
+	background-repeat: no-repeat;
     }
     #secondary-nav {
 	    margin-bottom: 5px; 
@@ -377,7 +381,7 @@ body {
 	height:200px;
 	margin:10px;
 	background:#111 url(../images/progress.gif) no-repeat center center;
-	border:1px solid #fff;
+	border:1px solid #333;
 	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
 	-moz-border-radius: 15px;
 	border-radius: 15px;
