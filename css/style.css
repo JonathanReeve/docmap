@@ -64,7 +64,7 @@ table {
 /* == Generic == {{{1 */
 body {
 	background: #363636 url("../images/site-bg.png");
-	font-family: 'TallysRegular';
+	font-family: 'TallysRegular' serif;
 }
 
     /* -- Headings -- {{{2 */
@@ -215,12 +215,58 @@ body {
 }
 
 /* == Header == {{{1 */
-#header {}
+#header {
+	padding-top: 20px;
+	height: 100px;
+}
+    /* === Search Box === {{{2 */
     #search-container {
-	    position: absolute; 
-	    right: 50px;	
-	    border: 1px solid red;
-    }
+	    position: relative;
+	    top: 32px;
+	    right: 50px;
+	    float: right;
+    }	
+    	#submit_search { 
+		display: none; /* Getting rid of search button. User can simply press <enter> */
+	}
+	#search { 
+		/* CSS3 Search Box adapted from http://www.bloggermint.com/2011/06/css3-search-box-inspired-by-apple-com/ */
+		background: url(../images/search-white.png) no-repeat 10px 6px #fcfcfc;
+		border: 1px solid #d1d1d1;
+		font: bold 12px Arial,Helvetica,Sans-serif;
+		color: #363636;
+		width: 150px;
+		padding: 6px 15px 6px 35px;
+		margin-bottom: 3px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+		text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+		-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+		-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+		/* animations */
+		-webkit-transition: all 0.7s ease 0s;
+		-moz-transition: all 0.7s ease 0s;
+		-o-transition: all 0.7s ease 0s;
+		transition: all 0.7s ease 0s; 
+	}
+	#search:focus { 
+		width: 200px; /* This elongates the search bar on focus */
+	}
+	/* for "Advanced Search" button */
+	#search-container a { 
+		padding: 10px;
+		margin: 0px 0 0 46px; 
+		color: #363636;
+		text-transform:lowercase;
+		font-variant: small-caps;
+	}
+	#search-container a:hover { 
+		color: #000;
+	} 
+
+
     #site-title { 
 	    padding: 20px;
 	    width: 600px;
@@ -229,9 +275,9 @@ body {
     #site-title a { 
 	text-decoration: none;
 	color: #222;
-        text-shadow: -1px 0px 0px #ccc;
+        text-shadow: -1px 0px 2px 2px #ccc;
 	font-weight: 600;
-        font-size: 40px;
+        font-size: 50px;
         letter-spacing: 5px; 
     }
 
@@ -241,12 +287,20 @@ body {
     #content {
    	margin: 30px; 
     }
+    .simple-page #content div { 
+	    display: inline-block;
+    } 
         #primary {
 	}
         #secondary {
+	}
+	.simple-page #primary { /* text columns for Simple Page plugin */
+		width: 500px;
+		padding: 20px 50px 20px 20px;
+		border-right: 1px solid #363636;
+	}
+	.simple-page #secondary { 
 		float: right;
-		display: inline;
-		width: 250px;	
 		border: 1px dotted orange;
 	}
 
@@ -353,7 +407,8 @@ body {
         /* Search Results */
         #advanced_search_header {}
         #primary #basic_search_header {}
-        #primary #submit_search {}
+        #primary #submit_search {
+	}
 
     /* Exhibits Pages */
     #exhibit-nav {}
