@@ -297,11 +297,14 @@ body {
 	.simple-page #primary { /* text columns for Simple Page plugin */
 		width: 500px;
 		padding: 20px 50px 20px 20px;
-		border-right: 1px solid #363636;
+		border-right: 1px ridge rgba(36,36,36,0.6);
 	}
 	.simple-page #secondary { 
-		float: right;
-		border: 1px dotted orange;
+		vertical-align: top;
+		padding: 20px; 
+	}
+	.simple-page #secondary li { /* submenu items */
+		list-style: square inside;
 	}
 
     /* General {{{2 */
