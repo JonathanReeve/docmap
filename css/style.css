@@ -71,6 +71,7 @@ body {
     h1 {
    	font-size: 2.4em;
         line-height: 1em;
+	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 	letter-spacing: .05em;
 	     }
@@ -81,7 +82,10 @@ body {
     h6 {}
 
     /* -- Misc Block elements -- {{{2 */
-    p {}
+    p {
+	    line-height: 130%;
+	    margin-top: 15px; /* spacing between paragraphs */
+    }
     ul {}
     ol {}
     dl {}
@@ -292,7 +296,7 @@ body {
    	margin: 30px; 
     }
     .simple-page #content div { 
-	    display: inline-block;
+	    display: inline-block; /* get the primary and secondary areas to display side-by-side */
     } 
         #primary {
 	}
@@ -309,6 +313,9 @@ body {
 	}
 	.simple-page #secondary li { /* submenu items */
 		list-style: square inside;
+	}
+	.simple-page #secondary li a { 
+		font-size: 24px;
 	}
 
     /* General {{{2 */
