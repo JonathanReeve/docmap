@@ -69,13 +69,17 @@ body {
 
     /* -- Headings -- {{{2 */
     h1 {
-   	font-size: 2.4em;
-        line-height: 1em;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	letter-spacing: .05em;
+	    font-size: 2.4em;
+	    line-height: 1em;
+	    margin-top: 0.5em;
+	    margin-bottom: 0.5em;
+	    letter-spacing: .05em;
 	     }
-    h2 {}
+    h2 {
+	    clear: both; /* this fixes problem with overlap on exhibit description displays */
+	    font-size: 2em;
+	    margin: 0.4em 0 0.2em 0;
+    }
     h3 {}
     h4 {}
     h5 {}
