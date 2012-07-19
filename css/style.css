@@ -107,9 +107,11 @@ body {
 	color: #581957; /* Bright purple */
     }
     a:visited {
-   	color: #3A053A; /* Darker purple */
+	color: #581957; /* Bright purple */
     }
-    a:hover {}
+    a:hover {
+	color: #D25FD1; /* Brighter purple */
+    }
     a:active {}
 
     .view-items-link {}
