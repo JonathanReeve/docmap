@@ -72,7 +72,7 @@ body {
 	    font-size: 2.4em;
 	    line-height: 1em;
 	    margin-top: 0.5em;
-	    margin-bottom: 0.5em;
+	    margin-bottom: 0.4em;
 	    letter-spacing: .05em;
 	     }
     h2 {
@@ -168,7 +168,7 @@ body {
         .element-text {}
 
         .item {}
-        .item-description {display:none;}
+        .item-description {display:none}
         .item-img {}
         .items-list {}
         .item-meta
@@ -336,7 +336,7 @@ body {
     #pagination-bottom {}
 
     /* Navigation {{{2 */
-    #primary-nav, #footer .navigation {
+    #primary-nav {
 	    padding: 10px;
 	    background-color: #363636;
 	    -moz-box-shadow: inset 0 0 2px 2px #222;
@@ -353,7 +353,7 @@ body {
 	font-variant: small-caps;
 	font-size: 20px;
     }
-    #primary-nav li a:hover, #footer .navigation li a:hover { 
+    #primary-nav li a:hover { 
 	color: #ddd;
 	background-image: url('../images/light.png');
 	background-position: center 50%;
@@ -444,11 +444,27 @@ body {
 #footer {
  	clear: both;
 	background: #363636;
+	padding: 20px;
 }
 
 #footer li.nav-home { 
 	display: none; /* temporarily disabling "home" button on footer for symmetry */
 } 
+
+#footer-text { 
+}
+
+#footer-text p { 
+	color: #bbb;
+	text-transform:lowercase;
+	font-variant: small-caps;
+	font-size: 120%;
+	text-align: center;
+}
+
+#footer-text a { 
+	color: #D25FD1; /* Brighter purple looks better on dark background*/
+}
 
 /* {{{1 Mosaic 
 	Mosaic - Sliding Boxes and Captions jQuery Plugin
@@ -507,6 +523,7 @@ body {
 	}
 	.mosaic-overlay h2 { 
 		padding: 10px;
+		font-size: 1em;
 	}
 	.mosaic-overlay h2 a { 
 		color: #FFF;
