@@ -439,7 +439,7 @@ body {
 	    display: none; /* disable display of images hand-coded into HTML by users in the exhibit descriptions */
     } 
 
-    .exhibit { 
+    .exhibit, .collection { 
 	    width: 400px; 
 	    display: inline-block; 
 	    vertical-align: top;
