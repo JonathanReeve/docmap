@@ -14,7 +14,7 @@ head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
     <div id="pagination-top" class="pagination"><?php echo pagination_links(); ?></div>
     <div class="clear"></div>
    <div id="hTagCloudContainer_items">
-	<a href="./tags"><h2>Tags</h2></a>
+	<a href="./tags"><h2>Top 30 Tags</h2></a>
 	<?php 
 		$tags = get_tags(array('sort' => 'most'), 30);  
 		echo tag_cloud($tags,uri('exhibits/browse')); 
