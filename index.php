@@ -6,6 +6,14 @@
     <p><?php echo get_theme_option('Homepage Text'); ?></p>
     <?php endif; ?>
 
+    <?php if ((get_theme_option('Display Featured Exhibit') !== '0')
+            && plugin_is_active('ExhibitBuilder')
+            && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
+    <!-- Featured Exhibit -->
+    <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
+    <?php endif; ?>
+
+
     <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
     <!-- Featured Item -->
     <div id="featured-item">
@@ -18,13 +26,6 @@
     <div id="featured-collection">
         <?php echo display_random_featured_collection(); ?>
     </div><!-- end featured collection -->
-    <?php endif; ?>
-
-    <?php if ((get_theme_option('Display Featured Exhibit') !== '0')
-            && plugin_is_active('ExhibitBuilder')
-            && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
-    <!-- Featured Exhibit -->
-    <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
     <?php endif; ?>
 
 </div><!-- end primary -->
