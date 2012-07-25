@@ -137,24 +137,37 @@ body {
 
         /* Pagination Classes */
 	.pagination { 
-		display: inline;
+		display: inline-block; /* to get the secondary nav to line up with the pagination links */
+		vertical-align: top;
+		float: right;
 	} 
 	.pagination ul { /* adapted these from the Berlin theme */
-			position: relative;
-			top: -10px; /* temporary fix */
-			left: 600px;
-			}
+		margin-bottom: 15px;
+		margin-right: 10px;
+	}
 			.pagination li {
 				display:inline;
-				padding:6px 8px;
-				background-color: #363636;
-				color:#fff;
 				margin-right:1px;
+				padding: 0px;
 				}
-			.pagination a {
-				color:#fff;
-				text-decoration:none;
+			.pagination li:hover { 
+				color: #ddd; 
+			} 
+			.pagination a, .pagination li.pagination_current {
+				padding: 6px 10px;
+				margin-right:1px;
+				color:#bbb;
+				background-color: #363636;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
 				}
+			.pagination li.pagination_current { 
+				background-color: #444;
+			}
+			.pagination a:hover { 
+				background-color: #444; 
+			}
 
         .next {}
         .previous {}
@@ -384,6 +397,10 @@ body {
 	    box-shadow: inset 0 0 2px 2px #222; 
     }
 
+    #primary-nav ul { 
+	    margin-left: 10px; /* needed to correct the left-shifting of the box-shadow fix */
+    }
+
     #primary-nav li, #footer .navigation li { 
 	display: inline;
     }	    
@@ -400,8 +417,9 @@ body {
 	background-repeat: no-repeat;
     }
     #secondary-nav {
-	    margin-bottom: 5px; 
-	    display: inline;
+	    margin-bottom: 15px; 
+	    display: inline-block; /* to get the secondary nav to line up with the pagination links */
+	    vertical-align: top;
     }
     				/* tabbed secondary nav adapted from Berlin theme */
 				#secondary-nav li {
@@ -531,11 +549,11 @@ body {
     } 
 
     .exhibit, .collection { 
-	    width: 400px; 
+	    width: 390px; 
 	    display: inline-block; 
 	    vertical-align: top;
 	    border: 1px solid #ccc;
-	    padding: 10px;
+	    padding: 15px;
 	    margin-right: 20px;
 	    margin-bottom: 20px;
 	    height: 300px; 
