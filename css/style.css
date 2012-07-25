@@ -224,7 +224,7 @@ body {
         .tags {}
 
         /* Tag Clouds */
-	#hTagCloudContainer { 
+	#hTagCloudContainer_exhibits, #hTagContainer_items { 
 		display: inline-block; 
 		float: right; 
 		height: 300px;
@@ -236,8 +236,20 @@ body {
 		background: rgba(255,255,255,0.4);
 		overflow-y: scroll;
 	}
-	#hTagCloudContainer h2 { 
+	#hTagCloudContainer_exhibits h2, #hTagCloudContainer_items h2 { 
 		text-align: center;
+	}
+	#hTagCloudContainer_items { 
+		float: right;
+		height: 170px;
+		width: 390px;
+		padding: 20px;
+		-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		background: rgba(255,255,255,0.4);
+		overflow-y: scroll;
+	}
 	}
         .hTagcloud ul {}
             .hTagcloud li {display: inline;}

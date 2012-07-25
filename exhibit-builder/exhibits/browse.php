@@ -13,7 +13,7 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
     <div class="pagination"><?php echo pagination_links(); ?></div>
 	
     <div id="exhibits">	
-    <div id="hTagCloudContainer">
+    <div id="hTagCloudContainer_exhibits">
 	<a href="./tags"><h2>Tags</h2></a>
 	<?php 
 		$tags = get_tags(array('sort' => 'most'), 30);  
