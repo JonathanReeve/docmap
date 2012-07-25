@@ -218,18 +218,32 @@ body {
         .tags {}
 
         /* Tag Clouds */
+	#hTagCloudContainer { 
+		display: inline-block; 
+		float: right; 
+		height: 300px;
+		width: 390px;
+		padding: 20px;
+		-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		background: rgba(255,255,255,0.4);
+		overflow-y: scroll;
+	}
+	#hTagCloudContainer h2 { 
+		text-align: center;
+	}
         .hTagcloud ul {}
-            .hTagcloud li {}
-
-            .popular a {}
-            .v-popular a {}
-            .vv-popular a {}
-            .vvv-popular a {}
-            .vvvv-popular a {}
-            .vvvvv-popular a {}
-            .vvvvvv-popular a {}
-            .vvvvvvv-popular a {}
-            .vvvvvvvv-popular a {}
+            .hTagcloud li {display: inline;}
+            .popular a {font-size: 1.2em;}
+            .v-popular a {font-size: 1.3em;}
+            .vv-popular a {font-size: 1.4em;}
+            .vvv-popular a {font-size: 1.5em;}
+            .vvvv-popular a {font-size: 1.6em;}
+            .vvvvv-popular a {font-size: 1.7em;}
+            .vvvvvv-popular a {font-size: 1.8em;}
+            .vvvvvvv-popular a {font-size: 1.9em;}
+            .vvvvvvvv-popular a {font-size: 2.0em;}
 
 
 /* == Wrap == {{{1 */

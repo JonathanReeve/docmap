@@ -13,6 +13,13 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
     <div class="pagination"><?php echo pagination_links(); ?></div>
 	
     <div id="exhibits">	
+    <div id="hTagCloudContainer">
+	<a href="./tags"><h2>Tags</h2></a>
+	<?php 
+		$tags = get_tags(array('sort' => 'most'), 30);  
+		echo tag_cloud($tags,uri('exhibits/browse')); 
+	?>
+    </div> <!-- end div id="hTagCloudContainer" --> 
     <?php $exhibitCount = 0; ?>
     <?php while(loop_exhibits()): ?>
     	<?php $exhibitCount++; ?>
@@ -25,12 +32,15 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
     		<p class="tags"><?php echo tag_string(get_current_exhibit(), uri('exhibits/browse/tag/')); ?></p>
     	</div>
     <?php endwhile; ?>
+
+
     </div>
     
+   
     <div class="pagination"><?php echo pagination_links(); ?></div>
 
     <?php else: ?>
 	<p><?php echo __('There are no exhibits available yet.'); ?></p>
 	<?php endif; ?>
-</div>
+</div> <!-- End of Primary --> 
 <?php foot(); ?>
