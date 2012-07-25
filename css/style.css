@@ -78,7 +78,7 @@ body {
     h2 {
 	    clear: both; /* this fixes problem with overlap on exhibit description displays */
 	    font-size: 2em;
-	    margin: 0.4em 0 0.2em 0;
+	    margin: 0.2em 0 0.2em 0;
     }
     h3 {}
     h4 {}
@@ -168,7 +168,9 @@ body {
         .element-text {}
 
         .item {}
-        .item-description {display:none}
+        .item-description {
+	
+	}
         .item-img {}
         .items-list {}
         .item-meta
@@ -305,8 +307,12 @@ body {
 	    display: inline-block; /* get the primary and secondary areas to display side-by-side */
     } 
         #primary {
+		display: inline-block;
 	}
         #secondary {
+		display: inline-block;
+		float: right;
+		vertical-align: top;
 	}
 	.simple-page #primary { /* text columns for Simple Page plugin */
 		width: 500px;
@@ -329,10 +335,29 @@ body {
 
 
     /* General {{{2 */
-    #featured-item {}
-    #recent-items {}
+    #featured-item {
 
-    #featured-exhibit {}
+   	 
+    }
+    #recent-items {
+	    width: 250px;
+	    padding: 10px;
+	    -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+	    -moz-border-radius: 15px;
+	    border-radius: 15px;
+	    background: rgba(255,255,255,0.4);
+    }
+
+    #featured-exhibit, #featured-collection, #featured-item {
+	    margin-bottom: 10px;
+	    width: 500px;
+	    padding: 10px;
+	    -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+	    -moz-border-radius: 15px;
+	    border-radius: 15px;
+	    background: rgba(255,255,255,0.4);
+    }
+
 
     #pagination-top {
     }
