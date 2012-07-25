@@ -124,7 +124,9 @@ body {
     .tags {}
 
     /* -- Misc Classes {{{2 */
-
+    .clear { /* this is a div I added to clear space between the nav area and items/collections/etc */
+	    clear: both;
+    }
     .image {} /* items/browse  */
 
     .description {}
@@ -141,6 +143,9 @@ body {
 		vertical-align: top;
 		float: right;
 	} 
+	.pagination.pagination_left { 
+		float: none; /* this makes for a pagination area on the left when there's nothing else on the left (i.e. "Browse by Tag," etc), like in the Browse Collections view */ 
+	}
 	.pagination ul { /* adapted these from the Berlin theme */
 		margin-bottom: 15px;
 		margin-right: 10px;
@@ -209,6 +214,7 @@ body {
 		vertical-align: top;
 		width: 200px;
 		margin-right: 10px;
+		clear: both;
 	}
 
         /* Search Classes */
@@ -581,6 +587,9 @@ body {
     /* Collections Pages */
     #collection-description {}
     #collectors {}
+    .collection { 
+	    clear:both;
+    }
 
 
 /* == Footer == {{{1 */

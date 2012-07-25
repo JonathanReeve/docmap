@@ -4,7 +4,8 @@ head(array('title'=>$pageTitle,'bodyid'=>'collections','bodyclass' => 'browse'))
 ?>
 <div id="primary">
     <h1><?php echo $pageTitle; ?></h1>
-    <div class="pagination"><?php echo pagination_links(); ?></div>
+    <div class="pagination pagination_left"><?php echo pagination_links(); ?></div>
+    <div class="clear"></div>
 
     <?php while (loop_collections()): ?>
     <div class="collection">
