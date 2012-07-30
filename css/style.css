@@ -617,7 +617,12 @@ body {
     /* Map Stuff for the Geolocation Plugin */
     #map.browse #primary {
 	    display: block; /* resetting display:inline which apparently makes the primary div width=630px */
-
+    }
+    #link_block { 
+    }
+    #map-block { 
+	    float: none; /* resetting Geolocation plugin defaults */
+	    width: 100%; /* Geolocation plugin defaults to 70% */
     }
 
 
