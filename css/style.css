@@ -380,6 +380,7 @@ body {
         #secondary {
 		display: inline-block;
 		vertical-align: top;
+		float: right;
 	}
 	.simple-page #primary { /* text columns for Simple Page plugin */
 		width: 500px;
@@ -387,6 +388,7 @@ body {
 		border-right: 1px ridge rgba(36,36,36,0.6);
 	}
 	.simple-page #secondary { 
+		float: none;
 		vertical-align: top;
 		padding: 20px; 
 	}
@@ -407,7 +409,7 @@ body {
    	 
     }
     #recent-items {
-	    width: 250px;
+	    width: 230px;
 	    padding: 10px;
 	    -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
 	    -moz-border-radius: 15px;
@@ -470,26 +472,22 @@ body {
 				#secondary-nav li {
 					display: inline;  
 					padding:0.5em 0;
-					}
-				#secondary-nav a {
-					padding:0.5em 1em 0.5em;
-					background:#fff;
-					color:#555;
-					font-weight:bold;
-					border-top:1px solid #ccc;
-					border-left:1px solid #ccc;
-					border-right:1px solid #ccc;
-					border-bottom:1px solid #fff;
-					}
+				}
+				#secondary-nav a, #secondary-nav li.nav-browse-all a {
+					padding: 6px 10px;
+					margin-right:1px;
+					color:#bbb;
+					background-color: #363636;
+					-webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
+					border-radius: 5px;
+				}
 				#secondary-nav li.current a {
-					color:#222;
-										}
-				.tags #secondary-nav .nav-browse-all a {
-					font-weight:normal;
-					border:none;
-					border-bottom:1px solid #fff;
-					background:none;
-					}
+					background-color: #444;
+				}					
+				#secondary-nav a:hover { 
+					background-color: #444; 
+				}
 
     /* Advanced Search */
     #advanced-search-form {}
@@ -614,6 +612,12 @@ body {
     #collectors {}
     .collection { 
 	    clear:both;
+    }
+
+    /* Map Stuff for the Geolocation Plugin */
+    #map.browse #primary {
+	    display: block; /* resetting display:inline which apparently makes the primary div width=630px */
+
     }
 
 
