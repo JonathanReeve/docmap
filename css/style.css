@@ -619,6 +619,11 @@ body {
 	    display: block; /* resetting display:inline which apparently makes the primary div width=630px */
     }
     #link_block { 
+	    margin-bottom: 15px;
+    }
+    #map-links { 
+	    width: 100%;
+	    margin-bottom: 15px;
     }
     #map-block { 
 	    float: none; /* resetting Geolocation plugin defaults */
