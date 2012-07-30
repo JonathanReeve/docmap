@@ -23,11 +23,10 @@ function pinstripe_get_first_exhibit_image() {
 					if($found!=true){
 						$item = $itempageobject[$i]['Item'];
 						if(!empty($item)){
-							echo item_square_thumbnail($item);
 							while (loop_files_for_item($item)):
 								$file = get_current_file();                                             
 //							print_r($file['archive_filename']);
-							   //  echo($file->getStoragePath('square thumbnail'));
+							     echo('<img src="archive/square_thumbnails/'.$file->getStoragePath('square thumbnail').'" />');
 							//exit;
 							if ($file->hasThumbnail()):                
 								if ($index == 0):                        
