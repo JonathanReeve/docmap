@@ -14,7 +14,7 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
 	
     <div id="exhibits">	
     <div id="hTagCloudContainer_exhibits">
-	<a href="./tags"><h2>Tags</h2></a>
+	<h2>Top Tags</h2>
 	<?php 
 		$tags = get_tags(array('sort' => 'most'), 30);  
 		echo tag_cloud($tags,uri('exhibits/browse')); 
@@ -27,6 +27,7 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
     		<h2><?php echo link_to_exhibit(); ?></h2>
 		<div class="exhibitImage">
 			<!--php code for displaying an exhibit image will go here as soon as I can get it to work --> 
+			<img src="../archive/square_thumbnails<?php pinstripe_get_first_exhibit_image() ?>">
 		</div>  
     		<div class="description"><?php echo exhibit('description'); ?></div>
     		<p class="tags"><?php echo tag_string(get_current_exhibit(), uri('exhibits/browse/tag/')); ?></p>
