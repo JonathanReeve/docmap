@@ -25,8 +25,9 @@ function pinstripe_get_first_exhibit_image() {
 						if(!empty($item)){
 							while (loop_files_for_item($item)):
 								$file = get_current_file();                                             
-//							print_r($file['archive_filename']);
-							     echo('<img src="archive/square_thumbnails/'.$file->getStoragePath('square thumbnail').'" />');
+								
+						//	print_r($file);
+							     echo('<img src="'.item_file('square thumbnail uri').'" />');
 							//exit;
 							if ($file->hasThumbnail()):                
 								if ($index == 0):                        
