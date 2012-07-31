@@ -590,6 +590,9 @@ body {
 	    border-radius: 15px;
 	    background: rgba(255,255,255,0.4);
     }
+    #metadata h2 { /* this should be just the part that says "Dublin Core" */
+    }
+
     #items.show .map { 
 	    width: 500px;
 	    height: 300px;
