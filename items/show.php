@@ -10,7 +10,7 @@
     <!-- The following returns all of the files associated with an item. -->
     <div id="itemfiles" class="element">
         <h3><?php echo __('Files'); ?></h3>
-        <div class="element-text"><?php echo display_files_for_item(); ?></div>
+	<div class="element-text"><?php echo display_files_for_item($options=array('imageSize'=>'thumbnail')); ?></div>
     </div>
 
     <!-- If the item belongs to a collection, the following creates a link to that collection. -->
