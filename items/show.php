@@ -3,8 +3,9 @@
 <div id="primary">
 
     <h1><?php echo item('Dublin Core', 'Title'); ?></h1>
-
-    <?php echo custom_show_item_metadata(); ?>
+	<div id="metadata">
+	    <?php echo custom_show_item_metadata(); ?>
+	</div>
 
     <!-- The following returns all of the files associated with an item. -->
     <div id="itemfiles" class="element">
