@@ -458,9 +458,14 @@ body {
     #featured-exhibit img.exhibitImage, #randomFeaturedItemImage img { 
 	    float: left;
 	    margin: 0px 10px 10px 0px;
+    }
+    #featured-exhibit img.exhibitImage, #randomFeaturedItemImage img, #recent-items .item-img {
 	    border: 8px solid white;
 	    -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
     }
+    #featured-exhibit img.exhibitImage:hover, #randomFeaturedItemImage img:hover, #recent-items .item-img:hover { 
+	    -webkit-box-shadow:0 1px 3px  1px rgba(0,0,0,0.5);
+    } 	
     #featuredExhibitDescription, #featuredItemMetadata { 
 	    min-height: 200px; /* so the thumbnail doesn't stick out of the div */
     }
@@ -495,6 +500,8 @@ body {
     }
     #recent-items h3, #recent-items .item-img { 
 	    text-align: center
+    }
+    #recent-items h3 a { 
     }
     #recent-items .item-img { 
 	    border: 8px solid white;
