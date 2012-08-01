@@ -82,9 +82,34 @@ function pinstripe_display_random_featured_exhibit()
 function pinstripe_display_random_featured_item($withImage = null)
 {
     $html = '<h2>'. __('Featured Item') .'</h2>';
-    $html .= display_random_featured_items('1', $withImage);
+    $html .= pinstripe_display_random_featured_items('1', $withImage);
     return $html;
 }
 
+function pinstripe_display_random_featured_items($num = 5, $hasImage = null)
+{
+    $html = '';
 
+    if ($randomFeaturedItems = random_featured_items($num, $hasImage)) {
+        foreach ($randomFeaturedItems as $randomItem) {
+            $itemTitle = item('Dublin Core', 'Title', array(), $randomItem);
+
+	    if (item_has_thumbnail($randomItem)) {
+                $html .= '<div id="randomFeaturedItemImage">'.link_to_item(item_square_thumbnail(array(), 0, $randomItem), array('class'=>'image'), 'show', $randomItem).'</div>';
+            }
+
+            $html .= '<div id="featuredItemMetadata"><h3>' . link_to_item($itemTitle, array(), 'show', $randomItem) . '</h3>';
+
+            
+
+            if ($itemDescription = item('Dublin Core', 'Description', array('snippet'=>150), $randomItem)) {
+                $html .= '<p class="item-description">' . $itemDescription . '</p></div><!--end featuredItemMetadata-->';
+            }
+        }
+    } else {
+        $html .= '<p>'.__('No featured items are available.').'</p>';
+    }
+
+    return $html;
+}
 ?>
