@@ -68,4 +68,23 @@ function pinstripe_display_random_featured_exhibit()
     return $html;
 }
 
+/**
+ * Returns the HTML markup for displaying a random featured item.  Most commonly
+ * used on the home page of public themes.
+ *
+ * @since 0.10
+ * @param boolean $withImage Whether or not the featured item should have an image associated
+ * with it.  If set to true, this will either display a clickable square thumbnail
+ * for an item, or it will display "You have no featured items." if there are
+ * none with images.
+ * @return string HTML
+ */
+function pinstripe_display_random_featured_item($withImage = null)
+{
+    $html = '<h2>'. __('Featured Item') .'</h2>';
+    $html .= display_random_featured_items('1', $withImage);
+    return $html;
+}
+
+
 ?>
