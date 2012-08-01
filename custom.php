@@ -46,12 +46,13 @@ endwhile;
 		}
 }
 
+//adapted from the rhythm theme
 function pinstripe_display_random_featured_exhibit()
 {
     $html = '<div id="featured-exhibit">';
     $featuredExhibit = exhibit_builder_random_featured_exhibit();
     $html .= '<h2>' . __('Featured Exhibit') . '</h2>';
-    $html .= pinstripe_get_first_exhibit_image();
+//    $html .= pinstripe_get_first_exhibit_image();
     if ($featuredExhibit) {
        $html .= '<h3>' . exhibit_builder_link_to_exhibit($featuredExhibit) . '</h3>'."\n";
        $html .= '<p>'.snippet_by_word_count(exhibit('description', array(), $featuredExhibit)).'</p>';
