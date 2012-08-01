@@ -53,13 +53,7 @@
                 </div>
                 <?php endif; ?>
 
-                <?php if($desc = item('Dublin Core', 'Description', array('snippet'=>150))): ?>
-
-                <div class="item-description"><?php echo $desc; ?><?php echo link_to_item('see more',(array('class'=>'show'))) ?></div>
-
-                <?php endif; ?>
-
-            </div>
+                   </div>
             <?php endwhile; ?>
         </div>
 
