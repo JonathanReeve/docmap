@@ -446,9 +446,10 @@ body {
     }
 
     #featured-exhibit, #featured-collection, #featured-item {
-	    margin-bottom: 10px;
-	    width: 500px;
-	    padding: 10px;
+	    margin-bottom: 20px;
+	    margin-left: 5px;
+	    width: 580px;
+	    padding: 10px 20px 20px 10px;
 	    -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
 	    -moz-border-radius: 15px;
 	    border-radius: 15px;
@@ -457,6 +458,7 @@ body {
     #featured-exhibit img.exhibitImage, #randomFeaturedItemImage img { 
 	    float: left;
 	    margin: 0px 10px 10px 0px;
+	    border: 8px solid white;
     }
     #featuredExhibitDescription, #featuredItemMetadata { 
 	    min-height: 200px; /* so the thumbnail doesn't stick out of the div */
