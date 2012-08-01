@@ -139,4 +139,27 @@ function pinstripe_snippet_by_word_count($text, $maxWords = 20, $ellipsis = ' ..
     return $text;
 }
 
+/**
+ * Returns the HTML markup for displaying a random featured collection.
+ *
+ * @since 0.10
+ * @return string
+ */
+function pinstripe_display_random_featured_collection()
+{
+    $featuredCollection = random_featured_collection();
+    $html = '<h2>' . __('Featured Collection') . '</h2>';
+    if ($featuredCollection) {
+        $html .= '<h3>' . link_to_collection($collectionTitle, array(), 'show', $featuredCollection) . '</h3>';
+        if ($collectionDescription = collection('Description', array('snippet'=>150), $featuredCollection)) {
+            $html .= '<p class="collection-description">' . $collectionDescription . '</p>';
+        }
+
+    } else {
+        $html .= '<p>' . __('No featured collections are available.') . '</p>';
+    }
+    return $html;
+}
+
+
 ?>
