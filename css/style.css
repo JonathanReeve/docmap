@@ -461,6 +461,36 @@ body {
     #featuredExhibitDescription, #featuredItemMetadata { 
 	    min-height: 200px; /* so the thumbnail doesn't stick out of the div */
     }
+    #featured-exhibit h2, #featured-item h2 { 
+	    background: #e3e3e3;  
+	    background: -moz-linear-gradient(top, #e3e3e3, #c8c8c8);  
+	    background: -webkit-gradient(linear, left top, left bottombottom, from(#e3e3e3), to(#c8c8c8));  
+	    padding: 10px 20px;  
+	    margin-left: -20px;  
+	    margin-top: 0;  
+	    margin-bottom: 10px;
+	    position: relative;  
+	    right: 10px;
+	    width: 50%;
+	    outline: 1px dashed #b1b1b1; 
+	    outline-offset: -8px;
+	
+	    -moz-box-shadow: 1px 1px 3px #292929;  
+	    -webkit-box-shadow: 1px 1px 3px #292929;  
+	    box-shadow: 1px 1px 3px #292929;  
+
+	    color: #454545;  
+	    text-shadow: 0 1px 0 white;   
+    }
+    #featured-exhibit span.ribbonEffect, #featured-item span.ribbonEffect { /* CSS ribbon effect adapted from http://net.tutsplus.com/tutorials/html-css-techniques/quick-tip-practical-css-shapes/ */
+	    width: 0; height: 0;  
+	    line-height: 0;  
+	    border-left: 20px solid transparent;  
+	    border-top: 10px solid #c8c8c8;  
+	    top: 104%;  
+	    left: 0;  
+	    position: absolute;   
+     }
 
     #pagination-top {
     }

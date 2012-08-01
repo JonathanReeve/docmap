@@ -54,7 +54,7 @@ function pinstripe_display_random_featured_exhibit()
 {
     $html = '<div id="featured-exhibit">';
     $featuredExhibit = exhibit_builder_random_featured_exhibit();
-    $html .= '<h2>' . __('Featured Exhibit') . '</h2>';
+    $html .= '<h2>' . __('Featured Exhibit') . '<span class="ribbonEffect"></span></h2>';
     $exhibitobject=$featuredExhibit;
     $html .= '<div class="exhibitImage">'.pinstripe_get_first_exhibit_image($exhibitobject).'</div>';
     if ($featuredExhibit) {
@@ -81,7 +81,7 @@ function pinstripe_display_random_featured_exhibit()
  */
 function pinstripe_display_random_featured_item($withImage = null)
 {
-    $html = '<h2>'. __('Featured Item') .'</h2>';
+    $html = '<h2>'. __('Featured Item') .'<span class="ribbonEffect"></span></h2>';
     $html .= pinstripe_display_random_featured_items('1', $withImage);
     return $html;
 }
