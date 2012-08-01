@@ -148,7 +148,7 @@ function pinstripe_snippet_by_word_count($text, $maxWords = 20, $ellipsis = ' ..
 function pinstripe_display_random_featured_collection()
 {
     $featuredCollection = random_featured_collection();
-    $html = '<h2>' . __('Featured Collection') . '</h2>';
+    $html = '<h2>' . __('Featured Collection') . '<span class="ribbonEffect"></span></h2>';
     if ($featuredCollection) {
         $html .= '<h3>' . link_to_collection($collectionTitle, array(), 'show', $featuredCollection) . '</h3>';
         if ($collectionDescription = collection('Description', array('snippet'=>150), $featuredCollection)) {
