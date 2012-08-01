@@ -29,7 +29,8 @@ function pinstripe_get_first_exhibit_image($exhibitobject) {
 								$file = get_current_file();                                             
 								
 						//	print_r($file);
-							     echo('<img  class="exhibitImage" src="'.item_file('square thumbnail uri').'" />');
+							     $html=('<img  class="exhibitImage" src="'.item_file('square thumbnail uri').'" />');
+							return $html;
 							//exit;
 							if ($file->hasThumbnail()):                
 								if ($index == 0):                        
@@ -57,8 +58,8 @@ function pinstripe_display_random_featured_exhibit()
     $exhibitobject=$featuredExhibit;
     $html .= '<div class="exhibitImage">'.pinstripe_get_first_exhibit_image($exhibitobject).'</div>';
     if ($featuredExhibit) {
-       $html .= '<h3>' . exhibit_builder_link_to_exhibit($featuredExhibit) . '</h3>'."\n";
-       $html .= '<p>'.snippet_by_word_count(exhibit('description', array(), $featuredExhibit)).'</p>';
+       $html .= '<div id="featuredExhibitDescription" ><h3>' . exhibit_builder_link_to_exhibit($featuredExhibit) . '</h3>'."\n";
+       $html .= '<p>'.snippet_by_word_count(exhibit('description', array(), $featuredExhibit)).'</p></div><!--end featuredExhibitDescription-->';
     } else {
        $html .= '<p>' . __('You have no featured exhibits.') . '</p>';
     }

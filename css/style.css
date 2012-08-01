@@ -454,7 +454,13 @@ body {
 	    border-radius: 15px;
 	    background: rgba(255,255,255,0.4);
     }
-
+    #featured-exhibit img.exhibitImage { 
+	    float: left;
+	    margin: 0px 10px 10px 0px;
+    }
+    #featuredExhibitDescription { 
+	    min-height: 200px; /* so the thumbnail doesn't stick out of the div */
+    }
 
     #pagination-top {
     }
