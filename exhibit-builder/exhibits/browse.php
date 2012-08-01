@@ -27,7 +27,7 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
     		<h2><?php echo link_to_exhibit(); ?></h2>
 		<div class="exhibitImage">
 			<!--php code for displaying an exhibit image will go here as soon as I can get it to work --> 
-			<?php pinstripe_get_first_exhibit_image() ?>
+			<?php pinstripe_get_first_exhibit_image($exhibitobject) ?>
 		</div>  
     		<div class="description"><?php echo exhibit('description'); ?></div>
     		<p class="tags"><?php echo tag_string(get_current_exhibit(), uri('exhibits/browse/tag/')); ?></p>

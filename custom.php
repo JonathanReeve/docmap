@@ -6,8 +6,10 @@
  * in Omeka and any plugins.
  */
 
-function pinstripe_get_first_exhibit_image() {
-	$exhibitobject=get_current_exhibit();
+function pinstripe_get_first_exhibit_image($exhibitobject) {
+	if(empty($exhibitobject)){
+		$exhibitobject=get_current_exhibit();
+	}
 		// from nancym, https://groups.google.com/forum/?fromgroups#!topic/omeka-dev/OGo6LMBOedk 
 		$itemcount=0;
 		$page="";
@@ -27,7 +29,7 @@ function pinstripe_get_first_exhibit_image() {
 								$file = get_current_file();                                             
 								
 						//	print_r($file);
-							     echo('<img src="'.item_file('square thumbnail uri').'" />');
+							     echo('<img  class="exhibitImage" src="'.item_file('square thumbnail uri').'" />');
 							//exit;
 							if ($file->hasThumbnail()):                
 								if ($index == 0):                        
@@ -52,7 +54,8 @@ function pinstripe_display_random_featured_exhibit()
     $html = '<div id="featured-exhibit">';
     $featuredExhibit = exhibit_builder_random_featured_exhibit();
     $html .= '<h2>' . __('Featured Exhibit') . '</h2>';
-//    $html .= pinstripe_get_first_exhibit_image();
+    $exhibitobject=$featuredExhibit;
+    $html .= '<div class="exhibitImage">'.pinstripe_get_first_exhibit_image($exhibitobject).'</div>';
     if ($featuredExhibit) {
        $html .= '<h3>' . exhibit_builder_link_to_exhibit($featuredExhibit) . '</h3>'."\n";
        $html .= '<p>'.snippet_by_word_count(exhibit('description', array(), $featuredExhibit)).'</p>';
