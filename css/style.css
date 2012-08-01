@@ -487,12 +487,18 @@ body {
     }
     #recent-items h2 { 
 	    text-align: center;
-	    text-shadow: 0 1px 0 white;   
 	    width: 100%;
 	    left: 0px;
     }
+    #home h3 { 
+	    padding-top: 10px;
+    }
     #recent-items h3, #recent-items .item-img { 
 	    text-align: center
+    }
+    #recent-items .item-img { 
+	    border: 8px solid white;
+	    -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
     }
     #home #secondary { 
 	    margin-bottom: 20px;
