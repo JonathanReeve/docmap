@@ -59,7 +59,7 @@ function pinstripe_display_random_featured_exhibit()
     $html .= '<div class="exhibitImage">'.pinstripe_get_first_exhibit_image($exhibitobject).'</div>';
     if ($featuredExhibit) {
        $html .= '<div id="featuredExhibitDescription" ><h3>' . exhibit_builder_link_to_exhibit($featuredExhibit) . '</h3>'."\n";
-       $html .= '<p>'.snippet_by_word_count(exhibit('description', array(), $featuredExhibit)).'</p></div><!--end featuredExhibitDescription-->';
+       $html .= '<p>'.pinstripe_snippet_by_word_count(exhibit('description', array(), $featuredExhibit),50).'</p></div><!--end featuredExhibitDescription-->';
     } else {
        $html .= '<p>' . __('You have no featured exhibits.') . '</p>';
     }
@@ -112,4 +112,31 @@ function pinstripe_display_random_featured_items($num = 5, $hasImage = null)
 
     return $html;
 }
+
+/**
+ * Retrieve a substring of the text by limiting the word count.
+ * Note: it strips the HTML tags from the text before getting the snippet
+ *
+ * @since 0.10
+ * @param string $text
+ * @param integer $maxWords
+ * @param string $ellipsis Optional '...' by default.
+ * @return string
+ */
+function pinstripe_snippet_by_word_count($text, $maxWords = 20, $ellipsis = ' ... ')
+{
+    // strip html tags from the text
+    $text = strip_formatting($text);
+
+    if ($maxWords > 0) {
+        $textArray = explode(' ', $text);
+        if (count($textArray) > $maxWords) {
+            $text = implode(' ', array_slice($textArray, 0, $maxWords)) . $ellipsis;
+        }
+    } else {
+        return '';
+    }
+    return $text;
+}
+
 ?>
