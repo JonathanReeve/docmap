@@ -628,8 +628,8 @@ body {
 	#advanced-search-form button, #submit_search_advanced, input#submit.submit { 
 		padding: 10px;
 		background: #808080;
-		background: -webkit-gradient(linear, left top, left bottom, from(#c6c9cc), to(#808080));
-		background: -webkit-linear-gradient(top, #c6c9cc, #808080);
+		background: -webkit-gradient(linear, left top, left bottom, from(#c6c9cc), to(#c2c2c2));
+		background: -webkit-linear-gradient(top, #c6c9cc, #aaaaaa);
 		background: -moz-linear-gradient(top, #c6c9cc, #808080);
 		background: -ms-linear-gradient(top, #c6c9cc, #808080);
 		background: -o-linear-gradient(top, #c6c9cc, #808080);
@@ -651,6 +651,9 @@ body {
 	.button:active {
 		border-top-color: #ed4ce8;
 		background: #ed4ce8;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
 	}
 	#advanced-search-form .field { 
 		margin-bottom: 15px;
