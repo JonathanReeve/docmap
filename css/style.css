@@ -786,6 +786,8 @@ body {
     }
     #link_block { 
 	    margin-bottom: 15px;
+	    height: 300px;
+	    overflow-y: scroll;
     }
     #map-links { 
 	    width: 100%;
