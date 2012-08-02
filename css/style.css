@@ -105,7 +105,7 @@ body {
 	    list-style-position: inside;
     }
     li li { /* list sub-items, mainly for the Collection Tree */
-	    text-indent: 1em;
+	    text-indent: 2em;
 	    list-style-type: circle;
     }
 
@@ -770,7 +770,7 @@ body {
     #exhibits .description img { 
 	    display: none; /* disable display of images hand-coded into HTML by users in the exhibit descriptions */
     } 
-    #exhibits .exhibitImage img { 
+    #exhibits .exhibitImage img, #collections .collectionImage img { 
 	    width: 150px;
 	    height: 150px;
 	    float: left;

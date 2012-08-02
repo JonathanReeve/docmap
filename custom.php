@@ -161,5 +161,10 @@ function pinstripe_display_random_featured_collection()
     return $html;
 }
 
-
+function pinstripe_get_first_collection_images() {
+	while(loop_items_in_collection(1)): 
+		echo item_square_thumbnail();
+	endwhile;
+	return $html;
+}
 ?>
