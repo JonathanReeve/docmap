@@ -780,6 +780,16 @@ body {
 	    -moz-box-shadow: rgba(0,0,0,.6) 1px 2px 2px;
 	    box-shadow: rgba(0,0,0,.6) 1px 2px 2px;
     }
+    #collections div.collectionImage { 
+	    width: 240px;
+	    margin-right: 5px;
+    }
+    #collections .collectionImage img { 
+	    display: inline;
+	    width: 75px;
+	    height: 75px;
+	    margin: 5px;
+    }
 
     .exhibit, .collection { 
 	    width: 390px; 

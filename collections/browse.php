@@ -15,8 +15,7 @@ head(array('title'=>$pageTitle,'bodyid'=>'collections','bodyclass' => 'browse'))
 		<?php echo pinstripe_get_first_collection_images() ?>
         </div><!--end collectionImage-->
         <div class="element">
-            <h3><?php echo __('Description'); ?></h3>
-            <div class="element-text"><?php echo nls2p(collection('Description', array('snippet'=>150))); ?></div>
+            <div class="element-text"><?php echo nls2p(collection('Description', array('snippet'=>250))); ?></div>
         </div>
 
         <?php if(collection_has_collectors()): ?>
