@@ -32,18 +32,19 @@
                 <?php echo link_to_item(item_square_thumbnail(array('alt'=>item('Dublin Core', 'Title')))); ?>
             </div>
             <?php endif; ?>
-
+	    <div id="item-metadata">
             <h3><?php echo link_to_item(item('Dublin Core', 'Title'), array('class'=>'permalink')); ?></h3>
 
-            <?php if ($text = item('Item Type Metadata', 'Text', array('snippet'=>1500))): ?>
+            <?php if ($text = item('Item Type Metadata', 'Text', array('snippet'=>150))): ?>
             <div class="item-description">
                 <p><?php echo $text; ?></p>
             </div>
-            <?php elseif ($description = item('Dublin Core', 'Description', array('snippet'=>1500))): ?>
+            <?php elseif ($description = item('Dublin Core', 'Description', array('snippet'=>150))): ?>
             <div class="item-description">
                 <?php echo $description; ?>
             </div>
             <?php endif; ?>
+	    </div><!--end item-metadata-->
         </div>
         <?php endwhile; ?>
     </div><!-- end collection-items -->
