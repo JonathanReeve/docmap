@@ -72,6 +72,7 @@ body {
 	    font-size: 2.4em;
 	    line-height: 1em;
 	    margin-top: 0.35em;
+	    margin-left: 10px;
 	    margin-bottom: 0.35em;
 	    letter-spacing: .05em;
     }
@@ -158,6 +159,7 @@ body {
 	} 
 	.pagination.pagination_left { 
 		float: none; /* this makes for a pagination area on the left when there's nothing else on the left (i.e. "Browse by Tag," etc), like in the Browse Collections view */ 
+		margin-left: 10px;
 	}
 	.pagination ul { /* adapted these from the Berlin theme */
 		margin-bottom: 15px;
@@ -185,6 +187,9 @@ body {
 			}
 			.pagination a:hover { 
 				background-color: #444; 
+			}
+			#pagination-bottom { 
+				margin-top: 20px;
 			}
 	ul.item-pagination.navigation { 
 		margin-top: 10px;
@@ -295,6 +300,10 @@ body {
 		background: rgba(255,255,255,0.4);
 		overflow-y: scroll;
 	}
+	#hTagCloudContainer_exhibits { 
+		margin-top: 10px;
+	}
+
 	#hTagCloudContainer_exhibits h2, #hTagCloudContainer_items h2 { 
 		text-align: center;
 		font-variant: small-caps;
@@ -439,6 +448,9 @@ body {
 		display: inline-block;
 		vertical-align: top;
 		float: right;
+	}
+	.simple-page #primary h1 { 
+		margin-left: 0;
 	}
 	.simple-page #primary { /* text columns for Simple Page plugin */
 		width: 500px;
@@ -586,6 +598,7 @@ body {
     }
     #secondary-nav {
 	    margin-bottom: 15px; 
+	    margin-left: 10px;
 	    display: inline-block; /* to get the secondary nav to line up with the pagination links */
 	    vertical-align: top;
     }
@@ -774,8 +787,9 @@ body {
 	    vertical-align: top;
 	    border: 1px solid #ccc;
 	    padding: 15px;
+	    margin-top: 10px;
 	    margin-right: 20px;
-	    margin-bottom: 20px;
+	    margin-bottom: 10px;
 	    height: 300px; 
 	    overflow-y: scroll;
 	    -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
