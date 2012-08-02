@@ -669,12 +669,19 @@ body {
 	    margin-top: 0px; /* what works for most other paragraphs doesn't work here */
     }
 
-    .inputs input { 
-	    margin: 10px 0;
+    .inputs input, textarea { /* mostly for the comments area */
+	    margin: 10px 0; 
 	    padding: 5px;
 	    -moz-border-radius: 5px;
 	    border-radius: 5px;
+	    -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15) inset;
+	    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+	    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15) inset;
     }
+	textarea { 
+		width: 400px;
+		height: 300px;
+	}
 
     div.field label { 
 	    margin-bottom: 5px;
