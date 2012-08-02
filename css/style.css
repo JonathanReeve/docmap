@@ -99,6 +99,7 @@ body {
     ol {}
     dl {}
     li {
+	    line-height: 1.2em;
     }
     li li { /* list sub-items, mainly for the Collection Tree */
 	    text-indent: 1em;
