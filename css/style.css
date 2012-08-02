@@ -99,7 +99,10 @@ body {
     ol {}
     dl {}
     li {
-	    line-height: 1.2em;
+	    line-height: 1.3em;
+	    text-indent: 1em;
+	    list-style-type: disc; 
+	    list-style-position: inside;
     }
     li li { /* list sub-items, mainly for the Collection Tree */
 	    text-indent: 1em;
@@ -243,12 +246,27 @@ body {
         .exhibit-tags {}
 
         /* Microformats Classes */
-        .hentry {
+        #items.browse .hentry {
  		display: inline-block; 	
 		vertical-align: top;
 		width: 200px;
 		margin-right: 20px;
 		clear: both;
+	}
+	#collections.show .hentry { 
+		padding: 20px;
+		margin-bottom: 15px;
+		-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		background: rgba(255,255,255,0.4);
+		overflow-y: scroll;
+	}
+	#collections.show .hentry img { 
+		float: left;
+		margin-right: 10px;
+		border: 8px solid white;
+		-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
 	}
 
         /* Search Classes */
@@ -779,7 +797,9 @@ body {
     }
 
     /* Collection Tree Plugin */
-
+    #collectionTree { /* this depends on my fork of the collectionTree plugin, which wraps this area in a div */
+	    margin-left: 15px;
+    }
 
 
 /* == Footer == {{{1 */

@@ -26,7 +26,6 @@
 
         <?php while (loop_items_in_collection(5)): ?>
         <div class="item hentry">
-            <h3><?php echo link_to_item(item('Dublin Core', 'Title'), array('class'=>'permalink')); ?></h3>
 
             <?php if (item_has_thumbnail()): ?>
             <div class="item-img">
@@ -34,11 +33,13 @@
             </div>
             <?php endif; ?>
 
-            <?php if ($text = item('Item Type Metadata', 'Text', array('snippet'=>250))): ?>
+            <h3><?php echo link_to_item(item('Dublin Core', 'Title'), array('class'=>'permalink')); ?></h3>
+
+            <?php if ($text = item('Item Type Metadata', 'Text', array('snippet'=>1500))): ?>
             <div class="item-description">
                 <p><?php echo $text; ?></p>
             </div>
-            <?php elseif ($description = item('Dublin Core', 'Description', array('snippet'=>250))): ?>
+            <?php elseif ($description = item('Dublin Core', 'Description', array('snippet'=>1500))): ?>
             <div class="item-description">
                 <?php echo $description; ?>
             </div>
