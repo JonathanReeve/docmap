@@ -98,7 +98,12 @@ body {
     ul {}
     ol {}
     dl {}
-    li {}
+    li {
+    }
+    li li { /* list sub-items, mainly for the Collection Tree */
+	    text-indent: 1em;
+	    list-style-type: circle;
+    }
 
     /* -- Misc Inline elements -- {{{2 */
     img {}
@@ -771,6 +776,9 @@ body {
 	    float: none; /* resetting Geolocation plugin defaults */
 	    width: 100%; /* Geolocation plugin defaults to 70% */
     }
+
+    /* Collection Tree Plugin */
+
 
 
 /* == Footer == {{{1 */
