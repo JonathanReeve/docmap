@@ -25,6 +25,14 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
     	<?php $exhibitCount++; ?>
     	<div class="exhibit <?php if ($exhibitCount%2==1) echo ' even'; else echo ' odd'; ?>">
     		<h2><?php echo link_to_exhibit(); ?></h2>
+
+		<div id="exhibit-credits">	
+			<h3><?php 
+				$exhibit=get_current_exhibit();
+				echo html_escape($exhibit->credits); 
+			   ?>
+			</h3>
+		</div>
 		<div class="exhibitImage">
 			<!--php code for displaying an exhibit image will go here as soon as I can get it to work --> 
 			<?php echo pinstripe_get_first_exhibit_image($exhibitobject) ?>
