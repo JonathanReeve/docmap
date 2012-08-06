@@ -29,7 +29,13 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
 			<!--php code for displaying an exhibit image will go here as soon as I can get it to work --> 
 			<?php echo pinstripe_get_first_exhibit_image($exhibitobject) ?>
 		</div>  
-    		<div class="description"><?php echo exhibit('description'); ?></div>
+		<div class="description">
+		<?php 
+			$description=exhibit('description'); 
+			$description=strip_tags($description, '<p><a>');
+			echo $description;
+		?>
+		</div>
     		<p class="tags"><?php echo tag_string(get_current_exhibit(), uri('exhibits/browse/tag/')); ?></p>
     	</div>
     <?php endwhile; ?>
