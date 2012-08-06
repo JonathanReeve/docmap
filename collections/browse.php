@@ -18,15 +18,6 @@ head(array('title'=>$pageTitle,'bodyid'=>'collections','bodyclass' => 'browse'))
             <div class="element-text"><?php echo nls2p(collection('Description', array('snippet'=>250))); ?></div>
         </div>
 
-        <?php if(collection_has_collectors()): ?>
-        <div class="element">
-            <h3><?php echo __('Collector(s)'); ?></h3>
-            <div class="element-text">
-                <p><?php echo collection('Collectors', array('delimiter'=>', ')); ?></p>
-            </div>
-        </div>
-        <?php endif; ?>
-
         <p class="view-items-link"><?php echo link_to_browse_items(__('View the items in %s', collection('Name')), array('collection' => collection('id'))); ?></p>
 
         <?php echo plugin_append_to_collections_browse_each(); ?>
