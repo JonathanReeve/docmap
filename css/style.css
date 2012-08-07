@@ -64,7 +64,7 @@ table {
 /* == Generic == {{{1 */
 body {
 	background: #363636 url("../images/site-bg.png");
-	font-family: 'TallysRegular' serif;
+	font-family: 'TallysRegular', Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
 
     /* -- Headings -- {{{2 */
@@ -429,7 +429,7 @@ body {
         text-shadow: -1px 0px 2px 2px #ccc;
 	font-weight: 600;
         font-size: 50px;
-        letter-spacing: 5px; 
+        letter-spacing: 2px; 
     }
 
 /* == Content == {{{1 */
@@ -586,7 +586,7 @@ body {
     }	    
     #primary-nav li a, #footer .navigation li a { 
 	color: #bbb;
-	padding: 10px 15px;
+	padding: 10px 13px;
 	font-variant: small-caps;
 	font-size: 20px;
     }
