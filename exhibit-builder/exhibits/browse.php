@@ -34,8 +34,7 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
 			</h3>
 		</div>
 		<div class="exhibitImage">
-			<!--php code for displaying an exhibit image will go here as soon as I can get it to work --> 
-			<?php echo pinstripe_get_first_exhibit_image($exhibitobject) ?>
+			<?php // echo pinstripe_get_first_exhibit_image($exhibitobject) ?>
 		</div>  
 		<div class="description">
 		<p><!--put it in a paragraph if it isn't already-->
