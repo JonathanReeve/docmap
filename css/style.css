@@ -823,8 +823,9 @@ body {
 	    display: block; /* resetting display:inline which apparently makes the primary div width=630px */
     }
     #link_block { 
+	    margin-top: 20px;
 	    margin-bottom: 15px;
-	    height: 300px;
+	    height: 400px;
 	    overflow-y: scroll;
     }
     #map-links { 
@@ -832,8 +833,10 @@ body {
 	    margin-bottom: 15px;
     }
     #map-block { 
-	    float: none; /* resetting Geolocation plugin defaults */
-	    width: 100%; /* Geolocation plugin defaults to 70% */
+	    float: right; /* resetting Geolocation plugin defaults */
+	    width: 70%; /* Geolocation plugin defaults to 70% */
+	    margin-top: 20px;
+	    margin-bottom: 20px;
     }
 
     /* Collection Tree Plugin */
