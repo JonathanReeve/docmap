@@ -770,6 +770,9 @@ body {
     #exhibits .description img { 
 	    display: none; /* disable display of images hand-coded into HTML by users in the exhibit descriptions */
     } 
+    #exhibits #exhibit-credits h3 { 
+	    text-indent: 1em;
+    }
     #exhibits .exhibitImage img, #collections .collectionImage img { 
 	    width: 150px;
 	    height: 150px;
