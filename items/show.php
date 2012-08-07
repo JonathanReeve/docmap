@@ -10,6 +10,7 @@
     <!-- The following returns all of the files associated with an item. -->
     <div id="itemfiles" class="element">
         <h3><?php echo __('Files'); ?></h3>
+	<h4><?php echo __('Click images for original-sized versions.'); ?></h4>
 	<div class="element-text"><?php echo display_files_for_item($options=array('imageSize'=>'thumbnail')); ?></div>
     </div>
 
