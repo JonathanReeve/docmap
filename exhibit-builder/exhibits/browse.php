@@ -38,11 +38,18 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
 			<?php echo pinstripe_get_first_exhibit_image($exhibitobject) ?>
 		</div>  
 		<div class="description">
+		<p><!--put it in a paragraph if it isn't already-->
 		<?php 
+				//this strips HTML from exhibit descriptions if the user checked the appropriate box in the theme config. 
 			$description=exhibit('description'); 
-			$description=strip_tags($description, '<p><a>');
-			echo $description;
+			if (get_theme_option('Strip HTML Descriptions') == 1) { 
+				$description=strip_tags($description, '<p><a>');
+				echo $description;
+			} else { 
+				echo $description; 
+			}
 		?>
+		</p>
 		</div>
     		<p class="tags"><?php echo tag_string(get_current_exhibit(), uri('exhibits/browse/tag/')); ?></p>
     	</div>
