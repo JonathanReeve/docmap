@@ -289,10 +289,9 @@ body {
         /* Tag Clouds */
 	#hTagCloudContainer_exhibits, #hTagContainer_items { 
 		display: inline-block; 
-		float: right; 
-		margin-right: 20px;
-		height: 300px;
-		width: 386px;
+		vertical-align: top;
+		height: 295px;
+		width: 383px;
 		padding: 20px;
 		padding-top: 15px;
 		-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
@@ -812,7 +811,6 @@ body {
 	    background: rgba(255,255,255,0.4);
     }
     #exhibits #featured-exhibit { /* featured exhibit on Browse Exhibits Page */
-	    width: 390px;
 	    display: inline-block; 
 	    vertical-align: top;
     }
