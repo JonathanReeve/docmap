@@ -486,7 +486,7 @@ body {
 	    background: rgba(255,255,255,0.4);
     }
 
-    #featured-exhibit, #featured-collection, #featured-item {
+    #home #featured-exhibit, #home #featured-collection, #home #featured-item {
 	    margin-bottom: 20px;
 	    margin-left: 5px;
 	    width: 580px;
@@ -810,6 +810,11 @@ body {
 	    -moz-border-radius: 15px;
 	    border-radius: 15px;
 	    background: rgba(255,255,255,0.4);
+    }
+    #exhibits #featured-exhibit { /* featured exhibit on Browse Exhibits Page */
+	    width: 390px;
+	    display: inline-block; 
+	    vertical-align: top;
     }
 
     /* Collections Pages */

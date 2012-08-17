@@ -13,6 +13,13 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
     <div class="pagination"><?php echo pagination_links(); ?></div>
 	
     <div id="exhibits">	
+	<div id="browseExhibitsFeaturedExhibit" class="exhibit">
+		<?php if ((get_theme_option('Display Featured Exhibit') !== '0')
+            		&& plugin_is_active('ExhibitBuilder')
+            		&& function_exists('exhibit_builder_display_random_featured_exhibit')): ?> <!-- Featured Exhibit -->
+		    <?php echo pinstripe_display_random_featured_exhibit(); ?>
+    		<?php endif; ?>
+	</div> <!--end browseExhibitsFeaturedExhibit--> 
     <div id="hTagCloudContainer_exhibits">
 	<h2>Top Tags</h2>
 	<?php 
