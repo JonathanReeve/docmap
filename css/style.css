@@ -183,10 +183,10 @@ body {
 				border-radius: 5px;
 				}
 			.pagination li.pagination_current { 
-				background-color: #444;
+				background-color: #555;
 			}
 			.pagination a:hover { 
-				background-color: #444; 
+				background-color: #555; 
 			}
 			#pagination-bottom { 
 				margin-top: 20px;
@@ -618,10 +618,10 @@ body {
 					border-radius: 5px;
 				}
 				#secondary-nav li.current a {
-					background-color: #444;
+					background-color: #555;
 				}					
 				#secondary-nav a:hover { 
-					background-color: #444; 
+					background-color: #555; 
 				}
 
     /* Advanced Search */
