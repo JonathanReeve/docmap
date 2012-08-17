@@ -291,7 +291,7 @@ body {
 		display: inline-block; 
 		vertical-align: top;
 		height: 295px;
-		width: 383px;
+		width: 239px;
 		padding: 20px;
 		padding-top: 15px;
 		-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
@@ -302,6 +302,7 @@ body {
 	}
 	#hTagCloudContainer_exhibits { 
 		margin-top: 10px;
+		height: 218px;
 	}
 
 	#hTagCloudContainer_exhibits h2, #hTagCloudContainer_items h2 { 
@@ -330,7 +331,6 @@ body {
 		text-align: center;
 	}
 	.hTagcloud li:nth-child(even) a{
-		color: #792278; 
 	}
             .hTagcloud li {
 		    white-space: nowrap;
@@ -510,6 +510,10 @@ body {
     } 	
     #featuredExhibitDescription, #featuredItemMetadata { 
 	    min-height: 200px; /* so the thumbnail doesn't stick out of the div */
+    }
+    #browseExhibitsFeaturedExhibit { 
+	    width: 532px;
+	    height: 220px;
     }
     #home h2 { 
 	    background: #e3e3e3;  

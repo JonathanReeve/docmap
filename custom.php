@@ -204,7 +204,6 @@ function pinstripe_tag_cloud($recordOrTags = null, $link = null, $maxClasses = 9
 
     foreach( $tags as $tag ) {
         $size = (int)(($tag['tagCount'] * $maxClasses) / $largest - 1);
-        $class = str_repeat('v', $size) . ($size ? '-' : '') . 'popular';
 	$count=$tag['tagCount'];
         $html .= '<li>';
         if ($link) {
