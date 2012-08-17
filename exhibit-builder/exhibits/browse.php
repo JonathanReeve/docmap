@@ -65,7 +65,7 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
     </div>
     
    
-    <div class="pagination"><?php echo pagination_links(); ?></div>
+    <div id="pagination-bottom" class="pagination"><?php echo pagination_links(); ?></div>
 
     <?php else: ?>
 	<p><?php echo __('There are no exhibits available yet.'); ?></p>
