@@ -307,6 +307,7 @@ body {
 
 	#hTagCloudContainer_exhibits h2, #hTagCloudContainer_items h2 { 
 		text-align: center;
+		font-size: 1.6em;
 		font-variant: small-caps;
 		border-bottom: 1px solid #D25FD1;
 	}
@@ -314,15 +315,18 @@ body {
 		float: right;
 		margin-top: 9px;
 		margin-right: 5px;
-		height: 163px;
+		height: 173px;
 		width: 390px;
 		padding: 20px;
+		padding-top: 10px;
 		-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
 		-moz-border-radius: 15px;
 		border-radius: 15px;
 		background: rgba(255,255,255,0.4);
-		overflow-y: scroll;
+		overflow: hidden;
 	}
+	#hTagCloudContainer_items li { 
+		display: inline;
 	}
         .hTagcloud ul {
 		text-align: center;
