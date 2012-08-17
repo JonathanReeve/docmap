@@ -807,7 +807,7 @@ body {
 	    display: inline;
 	    width: 75px;
 	    height: 75px;
-	    margin: 5px;
+	    margin: 5px 10px 5px 0;
     }
 
     .exhibit, .collection { 
