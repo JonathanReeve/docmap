@@ -327,16 +327,14 @@ body {
 		text-align: center;
 	}
 	.hTagcloud a {
-		white-space: nowrap;
 		text-align: center;
 	}
 	.hTagcloud li:nth-child(even) a{
 		color: #792278; 
 	}
             .hTagcloud li {
-		    display: inline;
+		    white-space: nowrap;
 		    margin-right: 7px;
-		    text-align: center;
 	    }
             .popular a {font-size: 1.2em;}
             .v-popular a {font-size: 1.3em;}

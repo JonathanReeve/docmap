@@ -24,7 +24,7 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
 	<h2>Top Tags</h2>
 	<?php 
 		$tags = get_tags(array('sort' => 'most'), 30);  
-		echo tag_cloud($tags,uri('exhibits/browse')); 
+		echo pinstripe_tag_cloud($tags,uri('exhibits/browse')); 
 	?>
     </div> <!-- end div id="hTagCloudContainer" --> 
     <?php $exhibitCount = 0; ?>

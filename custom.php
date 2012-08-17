@@ -167,4 +167,61 @@ function pinstripe_get_first_collection_images() {
 	endwhile;
 	return $html;
 }
+
+/* adapted from function tag_cloud
+ * returns html with tag count instead of font size category
+ */
+function pinstripe_tag_cloud($recordOrTags = null, $link = null, $maxClasses = 9)
+{
+    if (!$recordOrTags) {
+        $recordOrTags = array();
+    }
+
+    if ($recordOrTags instanceof Omeka_Record) {
+        $tags = $recordOrTags->Tags;
+    } else {
+        $tags = $recordOrTags;
+    }
+
+    if (empty($tags)) {
+        $html = '<p>'. __('No tags are available.') .'</p>';
+        return $html;
+    }
+
+    //Get the largest value in the tags array
+    $largest = 0;
+    foreach ($tags as $tag) {
+        if($tag["tagCount"] > $largest) {
+            $largest = $tag['tagCount'];
+        }
+    }
+    $html = '<div class="hTagcloud">';
+    $html .= '<ul class="popularity">';
+
+    if ($largest < $maxClasses) {
+        $maxClasses = $largest;
+    }
+
+    foreach( $tags as $tag ) {
+        $size = (int)(($tag['tagCount'] * $maxClasses) / $largest - 1);
+        $class = str_repeat('v', $size) . ($size ? '-' : '') . 'popular';
+	$count=$tag['tagCount'];
+        $html .= '<li>';
+        if ($link) {
+            $html .= '<a href="' . html_escape($link . '?tags=' . urlencode($tag['name'])) . '">';
+        }
+        $html .= html_escape($tag['name']);
+        if ($link) {
+            $html .= '</a> ('.$count.')';
+        }
+        $html .= '</li>' . "\n";
+    }
+    $html .= '</ul></div>';
+
+    return $html;
+}
+
+
+
+
 ?>
