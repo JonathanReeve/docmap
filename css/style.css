@@ -602,6 +602,9 @@ body {
 	background-position: center 50%;
 	background-repeat: no-repeat;
     }
+    #primary-nav .nav-collection-tree { 
+	    display: none; /* disabling primary nav area button "Collection Tree" because putting it as a secondary nav item in Browse Collections view */
+    }
     #secondary-nav {
 	    margin-bottom: 15px; 
 	    margin-left: 10px;
@@ -627,6 +630,9 @@ body {
 				}					
 				#secondary-nav a:hover { 
 					background-color: #555; 
+				}
+				#collections.browse .nav-browse-map { 
+					display: none; /* Browse Collections view shouldn't have Browse Map--that takes you to the map showing items, not collections */
 				}
 
     /* Advanced Search */
