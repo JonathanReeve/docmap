@@ -76,6 +76,9 @@ body {
 	    margin-bottom: 0.35em;
 	    letter-spacing: .05em;
     }
+    #items.show h1 { 
+	    margin-left: 0px; /* what works for most pages doesn't work here */
+    } 
     h2 {
 	    clear: both; /* this fixes problem with overlap on exhibit description displays */
 	    font-size: 1.8em;

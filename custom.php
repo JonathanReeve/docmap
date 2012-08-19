@@ -162,11 +162,19 @@ function pinstripe_display_random_featured_collection()
 }
 
 function pinstripe_get_first_collection_images() {
-	while(loop_items_in_collection(4)): 
-		echo item_square_thumbnail();
-	endwhile;
+	if (total_items_in_collection() == 0) {
+		echo "Whoa! Nothing here!"; 
+		/* find child items */
+		$childID=/*get child collection ID here */
+					set_current_collection(get_collection_by_id($childID));
+		while(loop_items_in_collection(4)) echo item_square_thumbnail();
+        	} else {
+	while(loop_items_in_collection(4)) echo item_square_thumbnail();
 	return $html;
+	}
 }
+
+
 
 /* adapted from function tag_cloud
  * returns html with tag count instead of font size category

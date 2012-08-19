@@ -17,7 +17,7 @@ head(array('title'=>$pageTitle,'bodyid'=>'items','bodyclass' => 'browse'));
    <a href="./tags"><h2><?php echo __('Top Tags'); ?></h2></a>
 	<?php 
 		$tags = get_tags(array('sort' => 'most'), 25);  
-		echo pinstripe_tag_cloud($tags,uri('exhibits/browse')); 
+		echo pinstripe_tag_cloud($tags,uri('items/browse')); 
 	?>
     </div> <!-- end div id="hTagCloudContainer" --> 
     <?php while (loop_items()): ?>
