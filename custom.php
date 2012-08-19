@@ -163,18 +163,37 @@ function pinstripe_display_random_featured_collection()
 
 function pinstripe_get_first_collection_images() {
 	if (total_items_in_collection() == 0) {
-		echo "Whoa! Nothing here!"; 
-		/* find child items */
-		$childID=/*get child collection ID here */
-					set_current_collection(get_collection_by_id($childID));
-		while(loop_items_in_collection(4)) echo item_square_thumbnail();
-        	} else {
+		/* find child items  */
+		$collectionId = collection('ID');
+		$childArray=pinstripe_get_child_collections($collectionId);
+		$thumbnailCount=0;
+		$childCount=0;
+		while ($thumbnailCount <= 3): 
+			$childID=$childArray[$childCount]['id'];
+			set_current_collection(get_collection_by_id($childID));
+			while (loop_items_in_collection() AND $thumbnailCount <= 3){
+				echo item_square_thumbnail();
+				$thumbnailCount++;
+			}
+			$childCount++;
+		endwhile;
+	} else {
 	while(loop_items_in_collection(4)) echo item_square_thumbnail();
 	return $html;
 	}
 }
 
-
+function pinstripe_get_child_collections($collectionId) {
+    if(plugin_is_active('CollectionTree')) {
+        $treeChildren = get_db()->getTable('CollectionTree')->getChildCollections($collectionId);
+        $childCollections = array();
+        foreach($treeChildren as $treeChild) {
+            $childCollections[] = get_collection_by_id($treeChild['id']);
+        }
+        return $childCollections;
+    }
+    return array();
+}
 
 /* adapted from function tag_cloud
  * returns html with tag count instead of font size category
