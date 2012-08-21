@@ -56,13 +56,31 @@ function pinstripe_display_random_featured_exhibit_slider()
     $featuredExhibit = exhibit_builder_random_featured_exhibit();
     $html .= '<h2>' . __('Featured Exhibit') . '<span class="ribbonEffect"></span></h2>';
     $exhibitobject=$featuredExhibit;
-	    $html .= '<div id="my-slideshow"><!--Start Slider-->
-    			<ul class="bjqs">
-			  <li><img src="themes/melody/images/banner01.jpg" /></li>
-			  <li><img src="themes/melody/images/banner02.jpg" /></li>
-			  <li><img src="themes/melody/images/banner03.jpg" /></li>
-			</ul>
-		      </div><!--end of my-slideshow-->';
+	    $html .= '<div id="sliderContainer"><!--Start Slider-->
+		    		<div id="mySlides"> 
+					<div id="slide1" class="slide">
+						<img src="http://www.google.com/intl/en_ALL/images/srpr/logo1w.png" /> 
+						<div class="slideContent">
+						<h3>Title of Exhibit Here</h3>
+						<p>Description Here</p>
+						</div><!--end slideContent-->
+					</div> <!--end slide1-->
+					<div id="slide2" class="slide">
+						<img src="http://www.google.com/intl/en_ALL/images/srpr/logo1w.png" /> 
+					</div> <!--end slide2-->
+					<div id="slide3" class="slide">
+						<img src="http://www.google.com/intl/en_ALL/images/srpr/logo1w.png" /> 
+					</div> <!--end slide3-->
+				</div> <!--end mySlides-->
+				<div id="myController">
+					<span class="jFlowControl">1</span>
+					<span class="jFlowControl">2</span>
+					<span class="jFlowControl">3</span>
+				</div>
+				<div class="jFlowPrev"></div>
+				<div class="jFlowNext"></div>
+				</div> <!--end of myController--> 
+		      </div><!--end of sliderContainer-->';
     $html .= '</div><!--End of featured-exhibit-->';
     $html = apply_filters('exhibit_builder_display_random_featured_exhibit', $html);
     return $html;
