@@ -497,7 +497,7 @@ body {
     #home #featured-exhibit, #home #featured-collection, #home #featured-item {
 	    margin-bottom: 20px;
 	    margin-left: 5px;
-	    width: 580px;
+	    /* width: 780px; */
 	    padding: 10px 20px 30px 10px;
 	    -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
 	    -moz-border-radius: 15px;
@@ -609,7 +609,7 @@ body {
 	background-position: center 50%;
 	background-repeat: no-repeat;
     }
-    #primary-nav .nav-collection-tree { 
+    #primary-nav .nav-collection-tree, #footer .nav-collection-tree { 
 	    display: none; /* disabling primary nav area button "Collection Tree" because putting it as a secondary nav item in Browse Collections view */
     }
     #secondary-nav {
