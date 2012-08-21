@@ -49,20 +49,21 @@ endwhile;
 			} 
 		}
 }
+
 function pinstripe_display_random_featured_exhibit_slider()
 {
     $html = '<div id="featured-exhibit">';
     $featuredExhibit = exhibit_builder_random_featured_exhibit();
     $html .= '<h2>' . __('Featured Exhibit') . '<span class="ribbonEffect"></span></h2>';
     $exhibitobject=$featuredExhibit;
-    $html .= '<div class="exhibitImage">'.pinstripe_get_first_exhibit_image($exhibitobject, $size="small").'</div>';
-    if ($featuredExhibit) {
-       $html .= '<div id="featuredExhibitDescription" ><h3>' . exhibit_builder_link_to_exhibit($featuredExhibit) . '</h3>'."\n";
-       $html .= '<p>'.pinstripe_snippet_by_word_count(exhibit('description', array(), $featuredExhibit),50).'</p></div><!--end featuredExhibitDescription-->';
-    } else {
-       $html .= '<p>' . __('You have no featured exhibits.') . '</p>';
-    }
-    $html .= '</div>';
+	    $html .= '<div id="my-slideshow"><!--Start Slider-->
+    			<ul class="bjqs">
+			  <li>testing</li>
+			  <li>two</li>
+			  <li>three</li>
+			</ul>
+		      </div><!--end of my-slideshow-->';
+    $html .= '</div><!--End of featured-exhibit-->';
     $html = apply_filters('exhibit_builder_display_random_featured_exhibit', $html);
     return $html;
 }
