@@ -57,7 +57,7 @@ function pinstripe_display_random_featured_exhibit()
     $featuredExhibit = exhibit_builder_random_featured_exhibit();
     $html .= '<h2>' . __('Featured Exhibit') . '<span class="ribbonEffect"></span></h2>';
     $exhibitobject=$featuredExhibit;
-    $html .= '<div class="exhibitImage">'.pinstripe_get_first_exhibit_image($exhibitobject, $size="large").'</div>';
+    $html .= '<div class="exhibitImage">'.pinstripe_get_first_exhibit_image($exhibitobject, $size="small").'</div>';
     if ($featuredExhibit) {
        $html .= '<div id="featuredExhibitDescription" ><h3>' . exhibit_builder_link_to_exhibit($featuredExhibit) . '</h3>'."\n";
        $html .= '<p>'.pinstripe_snippet_by_word_count(exhibit('description', array(), $featuredExhibit),50).'</p></div><!--end featuredExhibitDescription-->';
