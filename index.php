@@ -50,18 +50,15 @@
                 <?php if(item_has_thumbnail()): ?>
                 <div class="item-img">
                     <?php echo link_to_item(item_square_thumbnail()); ?>
-                </div>
+                </div> <!--End  -->
                 <?php endif; ?>
 
-                   </div>
+                   </div> <!--End  -->   
             <?php endwhile; ?>
-        </div>
-
-        <?php endif; ?>
-
+        </div> <!--End  -->
 
     </div><!--end recent-items -->
-
+        <?php endif; ?>
 
 </div><!-- end secondary -->
 
