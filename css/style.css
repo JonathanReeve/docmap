@@ -609,7 +609,7 @@ body {
 	background-position: center 50%;
 	background-repeat: no-repeat;
     }
-    #primary-nav .nav-collection-tree, #footer .nav-collection-tree { 
+    #primary-nav .nav-collection-tree, #footer .nav-collection-tree a { 
 	    display: none; /* disabling primary nav area button "Collection Tree" because putting it as a secondary nav item in Browse Collections view */
     }
     #secondary-nav {
