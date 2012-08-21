@@ -29,6 +29,19 @@
 				});
 		    });
 		</script> 
+
+		<script type="text/javascript">  
+		// and this handles the slider
+		jQuery(document).ready(function($){
+			$('#my-slideshow').bjqs({
+				'width' : 640,
+				'height' : 340,
+				'showMarkers' : true,
+				'showControls' : true,
+				'centerMarkers' : false
+			});
+		}); 
+		</script> 
     <?php custom_header_background(); ?>
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>

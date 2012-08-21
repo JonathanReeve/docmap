@@ -10,7 +10,7 @@
             && plugin_is_active('ExhibitBuilder')
             && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
     <!-- Featured Exhibit Slider-->
-    <?php echo pinstripe_display_random_featured_exhibit_slider(); ?>
+    <?php echo pinstripe_display_random_featured_exhibit(); ?>
     <?php endif; ?>
 
 

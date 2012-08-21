@@ -29,8 +29,8 @@ function pinstripe_get_first_exhibit_image($exhibitobject, $size) {
 								$file = get_current_file();                                             
 								
 						//	print_r($file);
-							     if ($size="small") $html=('<img  class="exhibitImage" src="'.item_file('square thumbnail uri').'" />');
-							     if ($size="large") $html=('<img  class="exhibitImage" src="'.item_file('thumbnail uri').'" />');
+							     if ($size=="small") $html=('<img  class="exhibitImage" src="'.item_file('square thumbnail uri').'" />');
+							     if ($size=="large") $html=('<img  class="exhibitImage" src="'.item_file('thumbnail uri').'" />');
 							return $html;
 							//exit;
 							if ($file->hasThumbnail()):                
@@ -58,9 +58,9 @@ function pinstripe_display_random_featured_exhibit_slider()
     $exhibitobject=$featuredExhibit;
 	    $html .= '<div id="my-slideshow"><!--Start Slider-->
     			<ul class="bjqs">
-			  <li>testing</li>
-			  <li>two</li>
-			  <li>three</li>
+			  <li><img src="themes/melody/images/banner01.jpg" /></li>
+			  <li><img src="themes/melody/images/banner02.jpg" /></li>
+			  <li><img src="themes/melody/images/banner03.jpg" /></li>
 			</ul>
 		      </div><!--end of my-slideshow-->';
     $html .= '</div><!--End of featured-exhibit-->';
