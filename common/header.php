@@ -11,14 +11,12 @@
     <?php plugin_header(); ?>
     <!-- Stylesheets -->
     <?php
-    queue_css('basic-jquery-slider');
     queue_css('style');
     display_css();
     ?>
     <!-- JavaScripts -->
     <?php 
     queue_js('mosaic.1.0.1.min'); 
-    queue_js('basic-jquery-slider.min'); 
     display_js(); 
     ?>
 		<!-- This snippet controls the mosaic overlay animation -->
@@ -33,13 +31,6 @@
 		<script type="text/javascript">  
 		// and this handles the slider
 		jQuery(document).ready(function($){
-			$('#my-slideshow').bjqs({
-				'width' : 640,
-				'height' : 340,
-				'showMarkers' : true,
-				'showControls' : true,
-				'centerMarkers' : false
-			});
 		}); 
 		</script> 
     <?php custom_header_background(); ?>
