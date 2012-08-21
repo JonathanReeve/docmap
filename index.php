@@ -32,15 +32,15 @@
 
 <div id="secondary">
 
-    <div id="recent-items">
-        <h2><?php echo __('Recently Added Items'); ?></h2>
 
         <?php
-        $homepageRecentItems = (int)get_theme_option('Homepage Recent Items') ? get_theme_option('Homepage Recent Items') : '3';
-        set_items_for_loop(recent_items($homepageRecentItems));
-        if (has_items_for_loop()):
+        $homepageRecentItems = (int)get_theme_option('Homepage Recent Items') ? get_theme_option('Homepage Recent Items') : '0';
+	if ($homepageRecentItems != 0) set_items_for_loop(recent_items($homepageRecentItems)); 
+	if (has_items_for_loop()):
         ?>
 
+    <div id="recent-items">
+        <h2><?php echo __('Recently Added Items'); ?></h2>
         <div class="items-list">
             <?php while (loop_items()): ?>
             <div class="item">
@@ -57,14 +57,11 @@
             <?php endwhile; ?>
         </div>
 
-        <?php else: ?>
-
-        <p><?php echo __('No recent items available.'); ?></p>
-
         <?php endif; ?>
 
 
     </div><!--end recent-items -->
+
 
 </div><!-- end secondary -->
 
