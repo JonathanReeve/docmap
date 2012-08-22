@@ -352,6 +352,13 @@ body {
             .vvvvvv-popular a {font-size: 1.8em;}
             .vvvvvvv-popular a {font-size: 1.9em;}
             .vvvvvvvv-popular a {font-size: 2.0em;}
+	#exhibit.tags .hTagcloud ul { 
+		text-align: left;
+	} 
+	#exhibit.tags .hTagcloud li { 
+		display: inline; 
+		list-style: none; 
+	} 
 
 
 /* == Wrap == {{{1 */
