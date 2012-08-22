@@ -59,17 +59,17 @@ function pinstripe_display_random_featured_exhibit_slider()
 	    $html .= '<div id="sliderContainer"><!--Start Slider-->
 		    		<div id="mySlides"> 
 					<div id="slide1" class="slide">
-						<img src="http://www.google.com/intl/en_ALL/images/srpr/logo1w.png" /> 
+						<img src="http://cinderellatravel.com/wp-content/uploads/2012/04/Excellence_Food_Sample-600x300.jpg"  /> 
 						<div class="slideContent">
 						<h3>Title of Exhibit Here</h3>
 						<p>Description Here</p>
 						</div><!--end slideContent-->
 					</div> <!--end slide1-->
 					<div id="slide2" class="slide">
-						<img src="http://www.google.com/intl/en_ALL/images/srpr/logo1w.png" /> 
+						<img src="http://everybliss.com/wp-content/uploads/2012/07/example-2-600x300.jpg"  /> 
 					</div> <!--end slide2-->
 					<div id="slide3" class="slide">
-						<img src="http://www.google.com/intl/en_ALL/images/srpr/logo1w.png" /> 
+						<img src="http://cinderellatravel.com/wp-content/uploads/2012/01/ocean_club_bahamas_weddings_12_01_2011_8484-600x300.jpg" /> 
 					</div> <!--end slide3-->
 				</div> <!--end mySlides-->
 				<div id="myController">
@@ -284,6 +284,62 @@ function pinstripe_tag_cloud($recordOrTags = null, $link = null, $maxClasses = 9
     return $html;
 }
 
+/* adapted from function tag_cloud
+ * returns html with tag count instead of font size category
+ * this one is for the exhibits page, contains h2 elements and such 
+ */
+function pinstripe_tag_cloud_exhibits($recordOrTags = null, $link = null, $maxClasses = 9)
+{
+    if (!$recordOrTags) {
+        $recordOrTags = array();
+    }
+
+    if ($recordOrTags instanceof Omeka_Record) {
+        $tags = $recordOrTags->Tags;
+    } else {
+        $tags = $recordOrTags;
+    }
+
+    if (empty($tags)) {
+        $html = '<p>'. __('No tags are available.') .'</p>';
+        return $html;
+    }
+
+    //Get the largest value in the tags array
+    $largest = 0;
+    foreach ($tags as $tag) {
+        if($tag["tagCount"] > $largest) {
+            $largest = $tag['tagCount'];
+        }
+    }
+
+    $html .= '<div id="hTagCloudContainer_exhibits">';
+    $html .= '<h2>Top Tags</h2>';
+    $html .= '<div class="hTagcloud">';
+    $html .= '<ul class="popularity">';
+
+    if ($largest < $maxClasses) {
+        $maxClasses = $largest;
+    }
+
+    foreach( $tags as $tag ) {
+        $size = (int)(($tag['tagCount'] * $maxClasses) / $largest - 1);
+	$count=$tag['tagCount'];
+        $html .= '<li>';
+        if ($link) {
+            $html .= '<a href="' . html_escape($link . '?tags=' . urlencode($tag['name'])) . '">';
+        }
+        $html .= html_escape($tag['name']);
+        if ($link) {
+            $html .= '</a> ('.$count.')';
+        }
+        $html .= '</li>' . "\n";
+    }
+    $html .= '</ul></div>';
+    $html .= '</div> <!-- end div id="hTagCloudContainer" -->'; 
+
+    return $html;
+}
 function pinstripe_custom_nav_items($navArray = array())
 {
     if (!$navArray) {
@@ -298,5 +354,13 @@ function pinstripe_custom_nav_items($navArray = array())
     }
 }
 
+/* This function tells whether you're on the /omeka/exhibits page or a search results page, like /omeka/exhibits/browse?tags=photographs
+ * This helps to differentiate the pages so that the search results page doesn't show a featured exhibit and tag list. 
+ * returns TRUE if the URL basename is /exhibits, returns FALSE if the URL basename is something else */  
+function pinstripe_is_browse_all() { 
+	$uri=$_SERVER[REQUEST_URI];
+	$parsed=basename($uri);
+	return ($parsed==exhibits); 
+}
 
 ?>

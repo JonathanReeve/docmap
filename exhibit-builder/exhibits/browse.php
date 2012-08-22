@@ -13,20 +13,20 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
     <div class="pagination"><?php echo pagination_links(); ?></div>
 	
     <div id="exhibits">	
-	<div id="browseExhibitsFeaturedExhibit" class="exhibit">
 		<?php if ((get_theme_option('Display Featured Exhibit') !== '0')
             		&& plugin_is_active('ExhibitBuilder')
-            		&& function_exists('exhibit_builder_display_random_featured_exhibit')): ?> <!-- Featured Exhibit -->
-		    <?php echo pinstripe_display_random_featured_exhibit(); ?>
+			&& function_exists('exhibit_builder_display_random_featured_exhibit')  			
+			&& pinstripe_is_browse_all()): ?> 
+		    <?php  
+			echo '<div id="browseExhibitsFeaturedExhibit" class="exhibit">'; 
+			echo pinstripe_display_random_featured_exhibit(); 
+			echo '</div> <!--end browseExhibitsFeaturedExhibit-->'; ?>
     		<?php endif; ?>
-	</div> <!--end browseExhibitsFeaturedExhibit--> 
-    <div id="hTagCloudContainer_exhibits">
-	<h2>Top Tags</h2>
-	<?php 
-		$tags = get_tags(array('sort' => 'most'), 30);  
-		echo pinstripe_tag_cloud($tags,uri('exhibits/browse')); 
-	?>
-    </div> <!-- end div id="hTagCloudContainer" --> 
+		<?php if (pinstripe_is_browse_all()): 
+			$tags = get_tags(array('sort' => 'most'), 30);  
+			echo pinstripe_tag_cloud_exhibits($tags,uri('exhibits/browse')); 
+		endif; 
+		?>
     <?php $exhibitCount = 0; ?>
     <?php while(loop_exhibits()): ?>
     	<?php $exhibitCount++; ?>
