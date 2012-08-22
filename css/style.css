@@ -331,7 +331,7 @@ body {
 	#hTagCloudContainer_items li { 
 		display: inline;
 	}
-        .hTagcloud ul {
+        #hTagCloudContainer_items .hTagcloud ul, #hTagCloudContainer_exhibits .hTagcloud ul {
 		text-align: center;
 	}
 	.hTagcloud a {
@@ -355,10 +355,11 @@ body {
 	#exhibit.tags .hTagcloud ul { 
 		text-align: left;
 	} 
-	#exhibit.tags .hTagcloud li { 
+	#exhibit.tags .hTagcloud li, #items.tags .hTagcloud li { 
 		display: inline; 
 		list-style: none; 
 	} 
+	
 
 
 /* == Wrap == {{{1 */
