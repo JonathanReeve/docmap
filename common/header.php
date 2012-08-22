@@ -48,6 +48,12 @@
 		    }); 
 		}(jQuery)); 
 		</script> 
+<style type="text/css"> 
+/* Overrides styles based on user preferences */
+#header { 
+	<?php if (get_theme_option('Hide Flower')) echo 'background: none;'; ?>
+} 
+</style> 
     <?php custom_header_background(); ?>
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
