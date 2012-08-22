@@ -1,6 +1,6 @@
 <?php head(array('title' => html_escape(exhibit('title') . ' : '. exhibit_page('title')), 'bodyid'=>'exhibit','bodyclass'=>'show')); ?>
-<div id="primary">
 	<h1><?php echo link_to_exhibit(); ?></h1>
+<div id="primary">
 
 	<h2><?php echo exhibit_page('title'); ?></h2>
 	
@@ -14,8 +14,7 @@
 
 <div id="secondary">
 <div id="nav-container">
-	<?php echo exhibit_builder_section_nav();?>
-	<?php echo exhibit_builder_page_nav();?>
+	<?php echo exhibit_builder_nested_nav();?>
 </div>
 </div>
 <?php foot(); ?>

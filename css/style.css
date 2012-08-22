@@ -791,7 +791,35 @@ body {
     /* Exhibits Pages */
     #exhibit-nav {}
     #exhibit-summary {}
-    #exhibit-show {}
+    #exhibit.show #primary {
+   	width: 600px; 
+    }
+    #exhibit.show #secondary {
+	    float: left; 
+	    margin-right: 20px;
+    } 
+    #exhibit.show #nav-container { 
+	    margin-top: 20px; 
+    } 
+    #exhibit.show #nav-container li { 
+	    list-style: none; 
+	    margin-bottom: 5px;
+    } 
+    #exhibit.show .exhibit-section-title { 
+	    font-size: 1.3em;
+	    font-variant: small-caps;
+    } 
+    #exhibit.show .exhibit-page-nav { 
+	    margin-top: 7px;
+	    margin-bottom: 7px;
+    } 
+    #exhibit.show .exhibit-page-nav li { 
+	    margin-right: 20px; 
+    } 
+    #exhibit.show .next-page { 
+	    float: right; 
+    } 
+    
 
     #exhibits .description img { 
 	    display: none; /* disable display of images hand-coded into HTML by users in the exhibit descriptions */
@@ -840,6 +868,30 @@ body {
 	    display: inline-block; 
 	    vertical-align: top;
     }
+    #exhibits #featured-exhibit h2 { 
+	    background: #e3e3e3;  
+	    background: -moz-linear-gradient(top, #e3e3e3, #c8c8c8);  
+	    background: -webkit-gradient(linear, left top, left bottombottom, from(#e3e3e3), to(#c8c8c8));  
+	    padding: 10px 20px;  
+	    margin-left: -20px;  
+	    margin-top: 0;  
+	    margin-bottom: 10px;
+	    position: relative;  
+	    left: 10px;
+	    width: 50%;
+	    outline: 1px dashed #b1b1b1; 
+	    outline-offset: -8px;
+	
+	    -moz-box-shadow: 1px 1px 3px #292929;  
+	    -webkit-box-shadow: 1px 1px 3px #292929;  
+	    box-shadow: 1px 1px 3px #292929;  
+
+	    color: #454545;  
+	    text-shadow: 0 1px 0 white;   
+    }
+    #exhibits #featured-exhibit .ribbonEffect { 
+	    display: none;
+    } 
 
     /* Collections Pages */
     #collection-description {}
