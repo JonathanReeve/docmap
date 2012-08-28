@@ -98,7 +98,7 @@ function pinstripe_display_random_featured_exhibit()
        $html .= '<div id="featuredExhibitDescription" ><h3>' . exhibit_builder_link_to_exhibit($featuredExhibit) . '</h3>'."\n";
        $credits=html_escape($exhibitobject->credits);
        $html .= '<div id="exhibit-credits"><h3>'.$credits.'</h3></div>';
-       $html .= '<p>'.pinstripe_snippet_by_word_count(exhibit('description', array(), $featuredExhibit),50).'</p></div><!--end featuredExhibitDescription-->';
+       $html .= '<p>'.pinstripe_snippet_by_word_count(exhibit('description', array(), $featuredExhibit),70).'</p></div><!--end featuredExhibitDescription-->';
     } else {
        $html .= '<p>' . __('You have no featured exhibits.') . '</p>';
     }
@@ -141,7 +141,7 @@ function pinstripe_display_random_featured_items($num = 5, $hasImage = null)
 
             
 
-            if ($itemDescription = item('Dublin Core', 'Description', array('snippet'=>150), $randomItem)) {
+            if ($itemDescription = item('Dublin Core', 'Description', array('snippet'=>350), $randomItem)) {
                 $html .= '<p class="item-description">' . $itemDescription . '</p></div><!--end featuredItemMetadata-->';
             }
         }
