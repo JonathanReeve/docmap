@@ -793,8 +793,6 @@ body {
 	}
 
     /* Exhibits Pages */
-    #exhibit-nav {}
-    #exhibit-summary {}
     #exhibit.summary #secondary { 
 	    float: left; 
 	    margin-right: 30px;
@@ -822,6 +820,9 @@ body {
 	    list-style: none; 
 	    margin-bottom: 5px;
     } 
+    #exhibit.show .exhibit-nested-section li.current a { 
+	    color: #D25FD1;
+    } 
     #exhibit.show .exhibit-section-title, #exhibit.summary .exhibit-section-title { 
 	    font-size: 1.3em;
 	    font-variant: small-caps;
@@ -836,8 +837,6 @@ body {
     #exhibit.show .next-page { 
 	    float: right; 
     } 
-    
-
     #exhibits .description img { 
 	    display: none; /* disable display of images hand-coded into HTML by users in the exhibit descriptions */
     } 
