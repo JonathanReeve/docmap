@@ -795,6 +795,19 @@ body {
     /* Exhibits Pages */
     #exhibit-nav {}
     #exhibit-summary {}
+    #exhibit.summary #secondary { 
+	    float: left; 
+	    margin-right: 30px;
+	    margin-top: 50px;
+    }
+    #exhibit.summary .exhibit-section-nav li { 
+	    list-style: none; 
+	    margin-bottom: 10px;
+    } 
+    #exhibit.summary #primary { 
+	    width: 700px; 
+	    float: right;
+    } 
     #exhibit.show #primary {
    	width: 600px; 
     }
@@ -809,7 +822,7 @@ body {
 	    list-style: none; 
 	    margin-bottom: 5px;
     } 
-    #exhibit.show .exhibit-section-title { 
+    #exhibit.show .exhibit-section-title, #exhibit.summary .exhibit-section-title { 
 	    font-size: 1.3em;
 	    font-variant: small-caps;
     } 
