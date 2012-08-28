@@ -96,6 +96,8 @@ function pinstripe_display_random_featured_exhibit()
     $html .= '<div class="exhibitImage">'.pinstripe_get_first_exhibit_image($exhibitobject, $size="small").'</div>';
     if ($featuredExhibit) {
        $html .= '<div id="featuredExhibitDescription" ><h3>' . exhibit_builder_link_to_exhibit($featuredExhibit) . '</h3>'."\n";
+       $credits=html_escape($exhibitobject->credits);
+       $html .= '<div id="exhibit-credits"><h3>'.$credits.'</h3></div>';
        $html .= '<p>'.pinstripe_snippet_by_word_count(exhibit('description', array(), $featuredExhibit),50).'</p></div><!--end featuredExhibitDescription-->';
     } else {
        $html .= '<p>' . __('You have no featured exhibits.') . '</p>';
