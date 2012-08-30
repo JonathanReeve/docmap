@@ -532,6 +532,11 @@ body {
     #browseExhibitsFeaturedExhibit { 
 	    width: 532px;
 	    height: 220px;
+	    -webkit-box-shadow: 0 1px 3px rgba(121, 34, 120, 0.8); 
+	    background: rgba(255, 217, 255,0.2) 
+    }
+    #browseExhibitsFeaturedExhibit h2 { 
+	    display: none; /* disabling "featured exhibit" banner for the moment */
     }
     #home h2 { 
 	    background: #e3e3e3;  
