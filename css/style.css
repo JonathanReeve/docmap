@@ -310,6 +310,9 @@ body {
 		margin-top: 10px;
 		height: 218px;
 	}
+	#hTagCloudContainer_exhibits li { 
+		list-style-type: none; /* bullet points don't look good with centered lists */
+	}
 
 	#hTagCloudContainer_exhibits h2, #hTagCloudContainer_items h2 { 
 		text-align: center;
