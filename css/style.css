@@ -941,6 +941,9 @@ body {
 	    width: 100%;
 	    margin-bottom: 15px;
     }
+    #map-links li { 
+	    list-style-type: none; 
+    } 
     #map-block { 
 	    float: right; /* resetting Geolocation plugin defaults */
 	    width: 70%; /* Geolocation plugin defaults to 70% */
