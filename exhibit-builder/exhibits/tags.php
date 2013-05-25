@@ -11,6 +11,9 @@ head(array('title' => $title, 'bodyid' => 'exhibit', 'bodyclass' => 'tags'));
     )); ?>
 </ul>
 
-<?php echo tag_cloud($tags,uri('exhibits/browse')); ?>
+<?php 
+	$tags = get_tags(array('sort' => 'alpha'), NULL); //setting this to NULL displays all tags
+	echo tag_cloud($tags,uri('exhibits/browse')); 
+?>
 </div>
 <?php foot(); ?>
