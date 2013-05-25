@@ -23,7 +23,7 @@ head(array('title'=>$title, 'bodyid' => 'exhibit', 'bodyclass'=>'browse'));
 			echo '</div> <!--end browseExhibitsFeaturedExhibit-->'; ?>
     		<?php endif; ?>
 		<?php if (pinstripe_is_browse_all()): 
-			$tags = get_tags(array('sort' => 'most'), 30);  
+			$tags = get_tags(array('type' => 'exhibit', 'sort' => 'most'), 30);  
 			echo pinstripe_tag_cloud_exhibits($tags,uri('exhibits/browse')); 
 		endif; 
 		?>
