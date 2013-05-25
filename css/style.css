@@ -228,6 +228,9 @@ body {
         .element-text {
 		margin-left: 15px;	
 	}
+	.item-file.image-jpeg img { 
+		max-width: 480px;  /* temporary fix for larger thumbnails */ 
+	} 
 	div.item-file img.full { 
 		clear: none; /* fixes problem with large images displaying under dublin core box */
 		position: relative;
