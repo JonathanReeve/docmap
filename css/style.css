@@ -943,6 +943,8 @@ body {
     }
     #map-links li { 
 	    list-style-type: none; 
+	    text-indent: -1em; /* hanging indent */ 
+	    padding-left: 2em; /* hanging indent */  
     } 
     #map-block { 
 	    float: right; /* resetting Geolocation plugin defaults */
