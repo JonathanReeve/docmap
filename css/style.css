@@ -189,10 +189,10 @@ body {
 				border-radius: 5px;
 				}
 			.pagination li.pagination_current { 
-				background-color: #555;
+				background-color: #666;
 			}
 			.pagination a:hover { 
-				background-color: #555; 
+				background-color: #666; 
 			}
 			#pagination-bottom { 
 				margin-top: 20px;
@@ -655,7 +655,7 @@ body {
 					border-radius: 5px;
 				}
 				#secondary-nav li.current a {
-					background-color: #555;
+					background-color: #666;
 				}					
 				#secondary-nav a:hover { 
 					background-color: #555; 
