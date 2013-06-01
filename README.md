@@ -1,5 +1,7 @@
 #DOCMAP
 
+This is the Omeka 2.0 version of the Pinstripe theme.  
+
 ##About
 This project, codenamed DOCMAP, is an open-source effort, spearheaded by NYU's History Department, to develop new themes and customization functionality for the Omeka content management system. 
 
