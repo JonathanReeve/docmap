@@ -352,6 +352,7 @@ body {
 		    white-space: nowrap;
 		    margin-right: 7px;
 	    }
+	    /* disabling differently-sized tags for now
             .popular a {font-size: 1.2em;}
             .v-popular a {font-size: 1.3em;}
             .vv-popular a {font-size: 1.4em;}
@@ -361,6 +362,7 @@ body {
             .vvvvvv-popular a {font-size: 1.8em;}
             .vvvvvvv-popular a {font-size: 1.9em;}
             .vvvvvvvv-popular a {font-size: 2.0em;}
+	    */ 
 	#exhibit.tags .hTagcloud ul { 
 		text-align: left;
 	} 
