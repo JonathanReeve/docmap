@@ -528,6 +528,9 @@ body {
 	    border-radius: 15px;
 	    background: rgba(255,255,255,0.4);
     }
+    #home #primary img { 
+	    width: 200px; /* temporary fix for too-large images on home page. This should really be done with Imagemagick resizes */ 
+    }
     #featured-exhibit img.exhibitImage, #randomFeaturedItemImage img { 
 	    float: left;
 	    margin: 0px 10px 10px 0px;
