@@ -345,6 +345,8 @@ body {
 	}
 	.hTagcloud a {
 		text-align: center;
+		background-color: rgba(255,255,255,.4);
+		padding: 2px;	
 	}
 	.hTagcloud li:nth-child(even) a{
 	}
@@ -352,6 +354,9 @@ body {
 		    white-space: nowrap;
 		    margin-right: 7px;
 	    }
+	ul.popularity { 
+		line-height: 1.6em;
+	} 
 	    /* disabling differently-sized tags for now
             .popular a {font-size: 1.2em;}
             .v-popular a {font-size: 1.3em;}
