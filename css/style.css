@@ -562,8 +562,8 @@ body {
 	    position: relative;  
 	    right: 10px;
 	    width: 50%;
-	    outline: 1px dashed #b1b1b1; 
-	    outline-offset: -8px;
+	    /* outline: 1px dashed #b1b1b1; 
+	    outline-offset: -8px; */ 
 	
 	    -moz-box-shadow: 1px 1px 3px #292929;  
 	    -webkit-box-shadow: 1px 1px 3px #292929;  
